@@ -54,4 +54,101 @@ public class RestEurekaClient : IRestEurekaClient
         resp.EnsureSuccessStatusCode();
         return (await resp.Content.ReadFromJsonAsync<OperacionCuentaResponse>())!;
     }
+
+    // ===== SUCURSALES =====
+    public async Task<Sucursal[]> ListarSucursales()
+    {
+        var arr = await _http.GetFromJsonAsync<Sucursal[]>("api/sucursales");
+        return arr ?? Array.Empty<Sucursal>();
+    }
+
+    public async Task<Sucursal?> ObtenerSucursal(string codigo)
+    {
+        try
+        {
+            return await _http.GetFromJsonAsync<Sucursal>($"api/sucursales/{codigo}");
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    public async Task<bool> CrearSucursal(Sucursal sucursal)
+    {
+        try
+        {
+            // Asegurar que el código tenga exactamente 3 caracteres
+            if (!string.IsNullOrWhiteSpace(sucursal.Codigo))
+            {
+                sucursal.Codigo = sucursal.Codigo.Trim().PadLeft(3, '0').Substring(0, 3);
+            }
+
+            var resp = await _http.PostAsJsonAsync("api/sucursales", sucursal);
+            if (!resp.IsSuccessStatusCode)
+            {
+                var error = await resp.Content.ReadAsStringAsync();
+                Console.WriteLine($"Error al crear sucursal: {error}");
+            }
+            return resp.IsSuccessStatusCode;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Excepción al crear sucursal: {ex.Message}");
+            return false;
+        }
+    }
+
+    public async Task<bool> ActualizarSucursal(string codigo, Sucursal sucursal)
+    {
+        try
+        {
+            // Asegurar que el código esté correctamente formateado
+            sucursal.Codigo = codigo;
+            
+            var resp = await _http.PutAsJsonAsync($"api/sucursales/{codigo}", sucursal);
+            if (!resp.IsSuccessStatusCode)
+            {
+                var error = await resp.Content.ReadAsStringAsync();
+                Console.WriteLine($"Error al actualizar sucursal {codigo}: Status {resp.StatusCode}, Respuesta: {error}");
+                throw new HttpRequestException($"Error al actualizar sucursal: {error}");
+            }
+            return resp.IsSuccessStatusCode;
+        }
+        catch (HttpRequestException)
+        {
+            throw;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Excepción al actualizar sucursal: {ex.Message}");
+            throw;
+        }
+    }
+
+    public async Task<bool> EliminarSucursal(string codigo)
+    {
+        try
+        {
+            var resp = await _http.DeleteAsync($"api/sucursales/{codigo}");
+            return resp.IsSuccessStatusCode;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public async Task<string> ObtenerApiKey()
+    {
+        try
+        {
+            var resp = await _http.GetFromJsonAsync<SucursalApiKeyResponse>("api/sucursales/config/apikey");
+            return resp?.ApiKey ?? string.Empty;
+        }
+        catch
+        {
+            return string.Empty;
+        }
+    }
 }

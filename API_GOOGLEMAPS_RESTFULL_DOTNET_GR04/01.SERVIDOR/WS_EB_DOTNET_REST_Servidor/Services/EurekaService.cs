@@ -75,7 +75,7 @@ namespace WS_EB_DOTNET_REST_Servidor.Services
                 cn, tx);
             cmd.Parameters.Add(new SqlParameter("@c", SqlDbType.Char, 8) { Value = cuenta });
             var ok = cmd.ExecuteScalar();
-            if (ok == null) throw new Exception($"La cuenta {cuenta} no existe o no está activa.");
+            if (ok == null) throw new Exception($"La cuenta {cuenta} no existe o no estï¿½ activa.");
         }
 
         private static decimal SaldoActual(SqlConnection cn, SqlTransaction tx, string cuenta)
@@ -89,7 +89,7 @@ namespace WS_EB_DOTNET_REST_Servidor.Services
             return Convert.ToDecimal(r);
         }
 
-        // ===== DEPÓSITO: retorna saldo actualizado (como SOAP) =====
+        // ===== DEPï¿½SITO: retorna saldo actualizado (como SOAP) =====
         public decimal RegistrarDeposito(string cuenta, decimal importe, string empleado)
         {
             using var cn = GetConnection();
@@ -267,6 +267,133 @@ namespace WS_EB_DOTNET_REST_Servidor.Services
                 tx.Rollback();
                 throw;
             }
+        }
+
+        // ========================================
+        // ===== CRUD SUCURSALES =====
+        // ========================================
+
+        // Listar sucursales activas (solo las que tienen bit_sucuisactive = 1)
+        public IEnumerable<Sucursal> ListarSucursales()
+        {
+            var lista = new List<Sucursal>();
+            using var cn = GetConnection();
+            using var cmd = new SqlCommand(@"
+                SELECT chr_sucucodigo, vch_sucunombre, vch_sucuciudad, vch_sucudireccion,
+                       int_sucucontcuenta, dec_sululatitud, dec_suculongitud, bit_sucuisactive
+                FROM dbo.Sucursal
+                WHERE bit_sucuisactive = 1
+                ORDER BY chr_sucucodigo;", cn);
+            cn.Open();
+            using var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(new Sucursal
+                {
+                    Codigo = dr.GetString(0).TrimEnd(),
+                    Nombre = dr.GetString(1),
+                    Ciudad = dr.GetString(2),
+                    Direccion = dr.IsDBNull(3) ? null : dr.GetString(3),
+                    ContadorCuenta = dr.GetInt32(4),
+                    Latitud = dr.IsDBNull(5) ? null : dr.GetDecimal(5),
+                    Longitud = dr.IsDBNull(6) ? null : dr.GetDecimal(6),
+                    IsActive = dr.GetBoolean(7)
+                });
+            }
+            return lista;
+        }
+
+        // Obtener una sucursal por cÃ³digo
+        public Sucursal? ObtenerSucursal(string codigo)
+        {
+            using var cn = GetConnection();
+            using var cmd = new SqlCommand(@"
+                SELECT chr_sucucodigo, vch_sucunombre, vch_sucuciudad, vch_sucudireccion,
+                       int_sucucontcuenta, dec_sululatitud, dec_suculongitud, bit_sucuisactive
+                FROM dbo.Sucursal
+                WHERE chr_sucucodigo = @codigo AND bit_sucuisactive = 1;", cn);
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+            cn.Open();
+            using var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                return new Sucursal
+                {
+                    Codigo = dr.GetString(0).TrimEnd(),
+                    Nombre = dr.GetString(1),
+                    Ciudad = dr.GetString(2),
+                    Direccion = dr.IsDBNull(3) ? null : dr.GetString(3),
+                    ContadorCuenta = dr.GetInt32(4),
+                    Latitud = dr.IsDBNull(5) ? null : dr.GetDecimal(5),
+                    Longitud = dr.IsDBNull(6) ? null : dr.GetDecimal(6),
+                    IsActive = dr.GetBoolean(7)
+                };
+            }
+            return null;
+        }
+
+        // Crear una nueva sucursal
+        public bool CrearSucursal(Sucursal sucursal)
+        {
+            using var cn = GetConnection();
+            using var cmd = new SqlCommand(@"
+                INSERT INTO dbo.Sucursal 
+                    (chr_sucucodigo, vch_sucunombre, vch_sucuciudad, vch_sucudireccion, 
+                     int_sucucontcuenta, dec_sululatitud, dec_suculongitud, bit_sucuisactive)
+                VALUES 
+                    (@codigo, @nombre, @ciudad, @direccion, @contador, @latitud, @longitud, 1);", cn);
+            
+            cmd.Parameters.Add(new SqlParameter("@codigo", SqlDbType.Char, 3) { Value = sucursal.Codigo });
+            cmd.Parameters.AddWithValue("@nombre", sucursal.Nombre);
+            cmd.Parameters.AddWithValue("@ciudad", sucursal.Ciudad);
+            cmd.Parameters.AddWithValue("@direccion", (object?)sucursal.Direccion ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@contador", sucursal.ContadorCuenta);
+            cmd.Parameters.AddWithValue("@latitud", (object?)sucursal.Latitud ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@longitud", (object?)sucursal.Longitud ?? DBNull.Value);
+            
+            cn.Open();
+            return cmd.ExecuteNonQuery() > 0;
+        }
+
+        // Actualizar una sucursal existente
+        public bool ActualizarSucursal(string codigo, Sucursal sucursal)
+        {
+            using var cn = GetConnection();
+            using var cmd = new SqlCommand(@"
+                UPDATE dbo.Sucursal
+                SET vch_sucunombre = @nombre,
+                    vch_sucuciudad = @ciudad,
+                    vch_sucudireccion = @direccion,
+                    int_sucucontcuenta = @contador,
+                    dec_sululatitud = @latitud,
+                    dec_suculongitud = @longitud
+                WHERE chr_sucucodigo = @codigo AND bit_sucuisactive = 1;", cn);
+            
+            cmd.Parameters.Add(new SqlParameter("@codigo", SqlDbType.Char, 3) { Value = codigo });
+            cmd.Parameters.AddWithValue("@nombre", sucursal.Nombre);
+            cmd.Parameters.AddWithValue("@ciudad", sucursal.Ciudad);
+            cmd.Parameters.AddWithValue("@direccion", (object?)sucursal.Direccion ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@contador", sucursal.ContadorCuenta);
+            cmd.Parameters.AddWithValue("@latitud", (object?)sucursal.Latitud ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@longitud", (object?)sucursal.Longitud ?? DBNull.Value);
+            
+            cn.Open();
+            return cmd.ExecuteNonQuery() > 0;
+        }
+
+        // EliminaciÃ³n lÃ³gica de una sucursal (marca bit_sucuisactive = 0)
+        public bool EliminarSucursal(string codigo)
+        {
+            using var cn = GetConnection();
+            using var cmd = new SqlCommand(@"
+                UPDATE dbo.Sucursal
+                SET bit_sucuisactive = 0
+                WHERE chr_sucucodigo = @codigo AND bit_sucuisactive = 1;", cn);
+            
+            cmd.Parameters.Add(new SqlParameter("@codigo", SqlDbType.Char, 3) { Value = codigo });
+            
+            cn.Open();
+            return cmd.ExecuteNonQuery() > 0;
         }
     }
 }

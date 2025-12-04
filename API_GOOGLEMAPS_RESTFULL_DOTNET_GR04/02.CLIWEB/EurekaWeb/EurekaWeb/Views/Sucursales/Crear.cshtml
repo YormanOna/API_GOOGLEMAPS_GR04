@@ -1,0 +1,440 @@
+@model EurekaWeb.Models.Rest.Sucursal
+@{
+    Layout = null;
+    var usuario = (string?)ViewBag.Usuario ?? "";
+    var apiKey = (string?)ViewBag.GoogleMapsApiKey ?? "";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Nueva Sucursal - EurekaBank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.98) 100%);
+            border-bottom: 5px solid #c00000;
+            padding: 20px 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-title h1 {
+            background: linear-gradient(135deg, #c00000 0%, #0052a3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .btn-back {
+            background: linear-gradient(135deg, #c00000 0%, #900000 100%);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all .3s ease;
+        }
+
+        .btn-back:hover {
+            background: linear-gradient(135deg, #900000 0%, #600000 100%);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 90px);
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .form-panel {
+            width: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .form-header {
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #c00000;
+        }
+
+        .form-header h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .instruction-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-left: 4px solid #0052a3;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .instruction-box p {
+            color: #1565c0;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        label span.required {
+            color: #c00000;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all .3s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #c00000;
+            box-shadow: 0 0 0 3px rgba(192,0,0,.1);
+        }
+
+        input[readonly] {
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+        }
+
+        .help-text {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #c00000 0%, #900000 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: all .3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #900000 0%, #600000 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(192,0,0,.5);
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .map-container {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-instruction {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #c00000;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(192,0,0,.4);
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        @@keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+        }
+
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#c00000" viewBox="0 0 24 24">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+            <h1>Nueva Sucursal</h1>
+        </div>
+        <a href="@Url.Action("Index", "Sucursales")" class="btn-back">
+            ← Volver a Sucursales
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="form-panel">
+            <div class="form-header">
+                <h2>📋 Datos de la Sucursal</h2>
+            </div>
+
+            <div class="instruction-box">
+                <p>💡 <strong>Instrucción:</strong> Haz clic en el mapa para seleccionar la ubicación de la sucursal. Los datos de ciudad, latitud y longitud se llenarán automáticamente.</p>
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert-error">@ViewBag.Error</div>
+            }
+
+            <form method="post" id="formSucursal">
+                <div class="form-group">
+                    <label>
+                        <span style="font-size: 18px;">🔢</span> Código <span class="required">*</span>
+                    </label>
+                    <input type="text" name="Codigo" id="Codigo" maxlength="3" placeholder="Ej: 008 (máx 3 caracteres)" required pattern=".{1,3}" title="Debe tener entre 1 y 3 caracteres" />
+                    <div class="help-text">Solo 3 caracteres permitidos (Ej: 001, 008, ABC)</div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <span style="font-size: 18px;">🏢</span> Nombre <span class="required">*</span>
+                    </label>
+                    <input type="text" name="Nombre" id="Nombre" placeholder="Ej: Sucursal Centro Histórico" required />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <span style="font-size: 18px;">🏙️</span> Ciudad <span class="required">*</span>
+                    </label>
+                    <input type="text" name="Ciudad" id="Ciudad" placeholder="Se llenará al hacer clic en el mapa" readonly required />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <span style="font-size: 18px;">📫</span> Dirección
+                    </label>
+                    <input type="text" name="Direccion" id="Direccion" placeholder="Ej: Av. Grau 1528" />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <span style="font-size: 18px;">📍</span> Latitud <span class="required">*</span>
+                    </label>
+                    <input type="number" step="any" name="Latitud" id="Latitud" placeholder="Haz clic en el mapa" readonly required />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <span style="font-size: 18px;">📍</span> Longitud <span class="required">*</span>
+                    </label>
+                    <input type="number" step="any" name="Longitud" id="Longitud" placeholder="Haz clic en el mapa" readonly required />
+                </div>
+
+                <input type="hidden" name="ContadorCuenta" value="0" />
+                <input type="hidden" name="IsActive" value="true" />
+
+                <button type="submit" class="btn-submit">💾 Guardar Cambios</button>
+            </form>
+        </div>
+
+        <div class="map-container">
+            <div class="map-instruction">
+                🖱️ Haz clic en el mapa para ubicar la sucursal
+            </div>
+            <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Pantalla completa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                </svg>
+            </button>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=@apiKey&callback=initMap" async defer></script>
+    <script>
+        let map;
+        let marker;
+        let geocoder;
+
+        function initMap() {
+            const ecuador = { lat: -1.8312, lng: -78.1834 };
+            
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: ecuador,
+                mapTypeId: 'roadmap'
+            });
+
+            geocoder = new google.maps.Geocoder();
+
+            map.addListener('click', (event) => {
+                placeMarker(event.latLng);
+            });
+        }
+
+        function placeMarker(location) {
+            if (marker) {
+                marker.setPosition(location);
+            } else {
+                marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    draggable: true
+                });
+
+                marker.addListener('dragend', (event) => {
+                    updateCoordinates(event.latLng);
+                    getCityName(event.latLng);
+                });
+            }
+
+            updateCoordinates(location);
+            getCityName(location);
+        }
+
+        function updateCoordinates(location) {
+            document.getElementById('Latitud').value = location.lat().toFixed(6);
+            document.getElementById('Longitud').value = location.lng().toFixed(6);
+        }
+
+        function getCityName(location) {
+            geocoder.geocode({ location: location }, (results, status) => {
+                if (status === 'OK' && results[0]) {
+                    let city = '';
+                    
+                    for (let component of results[0].address_components) {
+                        if (component.types.includes('locality')) {
+                            city = component.long_name;
+                            break;
+                        }
+                        if (component.types.includes('administrative_area_level_2')) {
+                            city = component.long_name;
+                        }
+                    }
+
+                    if (city) {
+                        document.getElementById('Ciudad').value = city;
+                    } else {
+                        document.getElementById('Ciudad').value = 'Ciudad no identificada';
+                    }
+
+                    if (!document.getElementById('Direccion').value) {
+                        document.getElementById('Direccion').value = results[0].formatted_address;
+                    }
+                }
+            });
+        }
+
+        function toggleFullscreen() {
+            const mapContainer = document.querySelector('.map-container');
+            if (!document.fullscreenElement) {
+                mapContainer.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        document.getElementById('formSucursal').addEventListener('submit', function(e) {
+            const codigo = document.getElementById('Codigo').value.trim();
+            const lat = document.getElementById('Latitud').value;
+            const lng = document.getElementById('Longitud').value;
+            
+            if (!codigo) {
+                e.preventDefault();
+                alert('Por favor, ingresa un código para la sucursal.');
+                return false;
+            }
+
+            if (codigo.length > 3) {
+                e.preventDefault();
+                alert('El código no puede tener más de 3 caracteres.');
+                return false;
+            }
+            
+            if (!lat || !lng || lat === '' || lng === '') {
+                e.preventDefault();
+                alert('Por favor, haz clic en el mapa para seleccionar la ubicación de la sucursal.');
+                return false;
+            }
+
+            // Asegurar que las coordenadas sean números válidos
+            const latNum = parseFloat(lat);
+            const lngNum = parseFloat(lng);
+            if (isNaN(latNum) || isNaN(lngNum)) {
+                e.preventDefault();
+                alert('Las coordenadas no son válidas. Por favor, selecciona una ubicación en el mapa.');
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
