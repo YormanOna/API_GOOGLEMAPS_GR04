@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Coordenadas</title>
+</head>
+<body>
+    <h1>Prueba de Coordenadas</h1>
+    
+    <h2>Prueba 1: Valores directos en onclick</h2>
+    <button onclick="testDirect('-0.1806532', '-78.4678382')">
+        Test con comillas simples
+    </button>
+    
+    <h2>Prueba 2: Valores desde data attributes</h2>
+    <button 
+        data-lat="-0.1806532" 
+        data-lng="-78.4678382"
+        onclick="testFromData(this)">
+        Test desde data attributes
+    </button>
+    
+    <h2>Prueba 3: Valores sin comillas (como números)</h2>
+    <button onclick="testDirect(-0.1806532, -78.4678382)">
+        Test sin comillas
+    </button>
+    
+    <div id="output" style="margin-top: 20px; padding: 10px; background: #f0f0f0;"></div>
+    
+    <script>
+        function log(msg) {
+            console.log(msg);
+            const output = document.getElementById('output');
+            output.innerHTML += msg + '<br>';
+        }
+        
+        function testDirect(lat, lng) {
+            log('=== testDirect ===');
+            log('lat recibido: ' + lat + ' (tipo: ' + typeof lat + ')');
+            log('lng recibido: ' + lng + ' (tipo: ' + typeof lng + ')');
+            
+            const latNum = parseFloat(lat);
+            const lngNum = parseFloat(lng);
+            
+            log('latNum: ' + latNum + ' (isNaN: ' + isNaN(latNum) + ')');
+            log('lngNum: ' + lngNum + ' (isNaN: ' + isNaN(lngNum) + ')');
+            
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${latNum},${lngNum}&travelmode=driving`;
+            log('URL generada: ' + url);
+            log('');
+        }
+        
+        function testFromData(button) {
+            log('=== testFromData ===');
+            const lat = button.getAttribute('data-lat');
+            const lng = button.getAttribute('data-lng');
+            
+            log('lat desde data-lat: ' + lat + ' (tipo: ' + typeof lat + ')');
+            log('lng desde data-lng: ' + lng + ' (tipo: ' + typeof lng + ')');
+            
+            const latNum = parseFloat(lat);
+            const lngNum = parseFloat(lng);
+            
+            log('latNum: ' + latNum + ' (isNaN: ' + isNaN(latNum) + ')');
+            log('lngNum: ' + lngNum + ' (isNaN: ' + isNaN(lngNum) + ')');
+            
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${latNum},${lngNum}&travelmode=driving`;
+            log('URL generada: ' + url);
+            log('');
+        }
+    </script>
+</body>
+</html>
