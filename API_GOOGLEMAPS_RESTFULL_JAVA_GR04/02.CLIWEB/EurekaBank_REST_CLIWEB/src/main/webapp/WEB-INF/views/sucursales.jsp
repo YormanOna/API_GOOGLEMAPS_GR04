@@ -249,139 +249,6 @@
                 height: calc(100vh - 180px);
             }
 
-            /* Modal */
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.7);
-                backdrop-filter: blur(5px);
-            }
-
-            .modal-content {
-                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-                margin: 5% auto;
-                padding: 0;
-                border-radius: 20px;
-                width: 90%;
-                max-width: 500px;
-                max-height: 90vh;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-                animation: modalSlideDown 0.3s ease;
-                display: flex;
-                flex-direction: column;
-            }
-
-            @keyframes modalSlideDown {
-                from {
-                    transform: translateY(-50px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            .modal-header {
-                background: linear-gradient(135deg, #c00000 0%, #900000 100%);
-                color: white;
-                padding: 20px 30px;
-                border-radius: 20px 20px 0 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .modal-header h2 {
-                margin: 0;
-                font-size: 22px;
-            }
-
-            .close {
-                color: white;
-                font-size: 32px;
-                font-weight: bold;
-                cursor: pointer;
-                line-height: 1;
-                transition: all 0.3s ease;
-            }
-
-            .close:hover {
-                transform: rotate(90deg);
-            }
-
-            .modal-body {
-                padding: 30px;
-                max-height: calc(100vh - 250px);
-                overflow-y: auto;
-            }
-
-            .form-group {
-                margin-bottom: 20px;
-            }
-
-            .form-group label {
-                display: block;
-                margin-bottom: 8px;
-                color: #333;
-                font-weight: 600;
-                font-size: 14px;
-            }
-
-            .form-group input {
-                width: 100%;
-                padding: 12px 15px;
-                border: 2px solid #e0e0e0;
-                border-radius: 12px;
-                font-size: 14px;
-                transition: all 0.3s ease;
-            }
-
-            .form-group input:focus {
-                outline: none;
-                border-color: #c00000;
-                box-shadow: 0 0 0 3px rgba(192,0,0,0.1);
-            }
-
-            .modal-footer {
-                padding: 20px 30px;
-                display: flex;
-                gap: 10px;
-                border-top: 2px solid #e0e0e0;
-            }
-
-            .btn {
-                flex: 1;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 12px;
-                cursor: pointer;
-                font-weight: bold;
-                font-size: 14px;
-                transition: all 0.3s ease;
-            }
-
-            .btn-primary {
-                background: linear-gradient(135deg, #c00000 0%, #900000 100%);
-                color: white;
-            }
-
-            .btn-primary:hover {
-                background: linear-gradient(135deg, #900000 0%, #600000 100%);
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(192,0,0,0.3);
-            }
-
-            .btn-secondary {
-                background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
-                color: white;
-            }
-
             .btn-secondary:hover {
                 background: linear-gradient(135deg, #5a6268 0%, #4e555b 100%);
                 transform: translateY(-2px);
@@ -422,6 +289,158 @@
                 border: 2px solid #f5c6cb;
             }
 
+            /* Modal de confirmación */
+            .modal-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 9999;
+                justify-content: center;
+                align-items: center;
+                animation: fadeIn 0.3s ease;
+            }
+
+            .modal-overlay.active {
+                display: flex;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            .modal-confirm {
+                background: white;
+                border-radius: 20px;
+                padding: 0;
+                width: 90%;
+                max-width: 450px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+                animation: slideUp 0.3s ease;
+                overflow: hidden;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .modal-header {
+                background: linear-gradient(135deg, #c00000 0%, #900000 100%);
+                color: white;
+                padding: 25px;
+                text-align: center;
+            }
+
+            .modal-header i {
+                font-size: 50px;
+                margin-bottom: 10px;
+                display: block;
+                animation: shake 0.5s ease;
+            }
+
+            @keyframes shake {
+                0%, 100% { transform: rotate(0deg); }
+                25% { transform: rotate(-10deg); }
+                75% { transform: rotate(10deg); }
+            }
+
+            .modal-header h3 {
+                margin: 0;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .modal-body {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .modal-body p {
+                font-size: 16px;
+                color: #333;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+
+            .modal-sucursal-name {
+                font-weight: bold;
+                color: #c00000;
+                font-size: 18px;
+                margin: 15px 0;
+            }
+
+            .modal-warning {
+                background: #fff3cd;
+                border: 2px solid #ffc107;
+                border-radius: 10px;
+                padding: 12px;
+                color: #856404;
+                font-size: 14px;
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .modal-warning i {
+                font-size: 20px;
+            }
+
+            .modal-footer {
+                padding: 20px 30px;
+                display: flex;
+                gap: 15px;
+                background: #f8f9fa;
+            }
+
+            .modal-btn {
+                flex: 1;
+                padding: 15px;
+                border: none;
+                border-radius: 12px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .modal-btn-cancel {
+                background: #6c757d;
+                color: white;
+            }
+
+            .modal-btn-cancel:hover {
+                background: #5a6268;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(108,117,125,0.3);
+            }
+
+            .modal-btn-confirm {
+                background: linear-gradient(135deg, #c00000 0%, #900000 100%);
+                color: white;
+            }
+
+            .modal-btn-confirm:hover {
+                background: linear-gradient(135deg, #900000 0%, #600000 100%);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(192,0,0,0.4);
+            }
+
             @media (max-width: 1024px) {
                 .content-wrapper {
                     grid-template-columns: 1fr;
@@ -438,6 +457,32 @@
         </style>
     </head>
     <body>
+        <!-- Modal de Confirmación -->
+        <div class="modal-overlay" id="deleteModal">
+            <div class="modal-confirm">
+                <div class="modal-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Confirmar Eliminación</h3>
+                </div>
+                <div class="modal-body">
+                    <p>¿Está seguro que desea eliminar la sucursal?</p>
+                    <div class="modal-sucursal-name" id="modalSucursalName"></div>
+                    <div class="modal-warning">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Esta acción marcará la sucursal como inactiva.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn modal-btn-cancel" onclick="closeDeleteModal()">
+                        <i class="fas fa-times"></i> Cancelar
+                    </button>
+                    <button class="modal-btn modal-btn-confirm" id="confirmDeleteBtn">
+                        <i class="fas fa-trash-alt"></i> Eliminar
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="header">
             <h1><i class="fas fa-store-alt"></i> Nuestras Sucursales</h1>
             <a href="<%= request.getContextPath()%>/menu" class="btn-back">
@@ -530,7 +575,7 @@
                                             <i class="fas fa-directions"></i>
                                         </button>
                                     <% } %>
-                                    <button class="btn-edit" onclick="editSucursal('<%= s.getCodigo() %>', '<%= s.getNombre() %>', '<%= s.getCiudad() %>', '<%= s.getDireccion() %>', '<%= s.getLatitud() %>', '<%= s.getLongitud() %>')" title="Editar">
+                                    <button class="btn-edit" onclick="window.location.href='<%= request.getContextPath()%>/sucursales?action=editar&codigo=<%= s.getCodigo() %>'" title="Editar">
                                         <i class="fas fa-pen"></i>
                                     </button>
                                     <button class="btn-delete" onclick="confirmDelete('<%= s.getCodigo() %>', '<%= s.getNombre() %>')" title="Eliminar">
@@ -549,46 +594,6 @@
                 <div class="map-container">
                     <div id="map"></div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Modal Editar -->
-        <div id="editModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>✏️ Editar Sucursal</h2>
-                    <span class="close" onclick="closeModal()">&times;</span>
-                </div>
-                <form action="<%= request.getContextPath()%>/sucursales" method="post">
-                    <input type="hidden" name="action" value="update">
-                    <input type="hidden" name="codigo" id="edit-codigo">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Nombre:</label>
-                            <input type="text" name="nombre" id="edit-nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Ciudad:</label>
-                            <input type="text" name="ciudad" id="edit-ciudad" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Direccion:</label>
-                            <input type="text" name="direccion" id="edit-direccion" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Latitud:</label>
-                            <input type="number" step="0.0000001" name="latitud" id="edit-latitud">
-                        </div>
-                        <div class="form-group">
-                            <label>Longitud:</label>
-                            <input type="number" step="0.0000001" name="longitud" id="edit-longitud">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                    </div>
-                </form>
             </div>
         </div>
 
@@ -672,20 +677,6 @@
                 }
             }
 
-            function editSucursal(codigo, nombre, ciudad, direccion, latitud, longitud) {
-                document.getElementById('edit-codigo').value = codigo;
-                document.getElementById('edit-nombre').value = nombre;
-                document.getElementById('edit-ciudad').value = ciudad;
-                document.getElementById('edit-direccion').value = direccion;
-                document.getElementById('edit-latitud').value = latitud !== 'null' ? latitud : '';
-                document.getElementById('edit-longitud').value = longitud !== 'null' ? longitud : '';
-                document.getElementById('editModal').style.display = 'block';
-            }
-
-            function closeModal() {
-                document.getElementById('editModal').style.display = 'none';
-            }
-
             // Función que lee las coordenadas desde los data attributes del botón
             function navigateToSucursalFromButton(button) {
                 const lat = button.getAttribute('data-lat');
@@ -738,7 +729,20 @@
             }
 
             function confirmDelete(codigo, nombre) {
-                if (confirm('Esta seguro que desea eliminar la sucursal "' + nombre + '"?\n\nEsta accion marcara la sucursal como inactiva.')) {
+                const modal = document.getElementById('deleteModal');
+                const modalName = document.getElementById('modalSucursalName');
+                const confirmBtn = document.getElementById('confirmDeleteBtn');
+                
+                modalName.textContent = nombre;
+                modal.classList.add('active');
+                
+                // Remover listeners anteriores
+                const newConfirmBtn = confirmBtn.cloneNode(true);
+                confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+                
+                // Agregar nuevo listener
+                newConfirmBtn.addEventListener('click', function() {
+                    closeDeleteModal();
                     fetch('<%= request.getContextPath()%>/sucursales?action=delete&codigo=' + codigo)
                         .then(() => {
                             showToast('Sucursal Eliminada', 'La sucursal "' + nombre + '" ha sido eliminada correctamente');
@@ -749,8 +753,27 @@
                         .catch(() => {
                             showToast('Error', 'No se pudo eliminar la sucursal', true);
                         });
-                }
+                });
             }
+            
+            function closeDeleteModal() {
+                const modal = document.getElementById('deleteModal');
+                modal.classList.remove('active');
+            }
+            
+            // Cerrar modal al hacer clic fuera de él
+            document.getElementById('deleteModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeDeleteModal();
+                }
+            });
+            
+            // Cerrar modal con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeDeleteModal();
+                }
+            });
 
             // Cerrar modal al hacer clic fuera de él
             window.onclick = function(event) {

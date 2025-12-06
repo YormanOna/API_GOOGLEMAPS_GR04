@@ -164,6 +164,13 @@ namespace EurekaWeb.Controllers
 
             try
             {
+                // Log para ver qué llega del formulario
+                Console.WriteLine($"=== POST Editar/{id} - Datos recibidos del formulario ===");
+                Console.WriteLine($"Latitud recibida: {sucursal.Latitud}");
+                Console.WriteLine($"Longitud recibida: {sucursal.Longitud}");
+                Console.WriteLine($"Nombre: {sucursal.Nombre}");
+                Console.WriteLine($"Ciudad: {sucursal.Ciudad}");
+                
                 // Validaciones básicas antes de enviar
                 if (string.IsNullOrWhiteSpace(sucursal.Nombre))
                 {

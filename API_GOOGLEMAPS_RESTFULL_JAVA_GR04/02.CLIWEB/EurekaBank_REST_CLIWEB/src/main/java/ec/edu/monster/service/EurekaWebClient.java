@@ -15,9 +15,18 @@ public class EurekaWebClient {
 
     private static final String BASE_URL = "http://localhost:8080/WSEurekaBank_Restfull_Java_G4/resources/corebancario";
     
+    // Cliente singleton con inicialización lazy thread-safe
+    private static volatile Client client;
+    
     private static Client getClient() {
-        // Crear nuevo cliente en cada llamada para evitar problemas de inicialización
-        return ClientBuilder.newClient();
+        if (client == null) {
+            synchronized (EurekaWebClient.class) {
+                if (client == null) {
+                    client = ClientBuilder.newClient();
+                }
+            }
+        }
+        return client;
     }
 
     // ========= LOGIN =========

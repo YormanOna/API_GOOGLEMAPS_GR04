@@ -362,22 +362,23 @@
             /* Estilo específico para el botón de Sucursales */
             .sucursales-btn {
                 cursor: pointer;
-                flex: 0 1 200px !important; /* Ancho fijo más pequeño */
-                min-width: 200px !important;
-                max-width: 200px !important;
+                flex: 0 1 240px !important; /* Ancho un poco más largo */
+                min-width: 240px !important;
+                max-width: 240px !important;
             }
             
             .sucursales-btn .card-icon {
                 background: linear-gradient(135deg, #c00000 0%, #0052a3 100%);
-                height: 140px; /* Un poco más pequeño que las otras */
+                height: 160px; /* Mismo tamaño que las otras tarjetas */
             }
             
             .sucursales-btn .card-title {
-                background: linear-gradient(135deg, #c00000 0%, #0052a3 100%);
-                color: white;
+                background: white;
+                color: #2c3e50;
                 font-weight: 700;
-                padding: 12px 10px;
-                font-size: 15px;
+                padding: 15px 20px;
+                font-size: 17px;
+                min-height: 60px;
             }
 
         </style>

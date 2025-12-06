@@ -1,7 +1,13 @@
 using Microsoft.OpenApi.Models;
+using System.Globalization;
 using WS_EB_DOTNET_REST_Servidor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configurar cultura invariante para que use punto (.) como separador decimal
+var cultureInfo = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
 // Configurar URLs para escuchar en todas las interfaces de red
 builder.WebHost.UseUrls("https://0.0.0.0:7043", "http://0.0.0.0:5043");
@@ -17,7 +23,12 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Asegurar que JSON use punto como separador decimal
+        options.JsonSerializerOptions.WriteIndented = true;
+    });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

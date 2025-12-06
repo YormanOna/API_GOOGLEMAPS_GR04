@@ -282,14 +282,16 @@
                     <label>
                         <span style="font-size: 18px;">📍</span> Latitud <span class="required">*</span>
                     </label>
-                    <input type="text" name="Latitud" id="Latitud" value="@(Model.Latitud?.ToString(System.Globalization.CultureInfo.InvariantCulture) ?? "")" required pattern="-?[0-9]+(\.[0-9]+)?" />
+                    <input type="text" name="Latitud" id="Latitud" value="@(Model.Latitud?.ToString("F6", System.Globalization.CultureInfo.InvariantCulture) ?? "")" style="background-color: #f0f8ff; font-family: monospace; font-weight: bold;" onfocus="this.blur()" title="Use el mapa para actualizar las coordenadas" />
+                    <div class="help-text">Las coordenadas se actualizan haciendo clic en el mapa</div>
                 </div>
 
                 <div class="form-group">
                     <label>
                         <span style="font-size: 18px;">📍</span> Longitud <span class="required">*</span>
                     </label>
-                    <input type="text" name="Longitud" id="Longitud" value="@(Model.Longitud?.ToString(System.Globalization.CultureInfo.InvariantCulture) ?? "")" required pattern="-?[0-9]+(\.[0-9]+)?" />
+                    <input type="text" name="Longitud" id="Longitud" value="@(Model.Longitud?.ToString("F6", System.Globalization.CultureInfo.InvariantCulture) ?? "")" style="background-color: #f0f8ff; font-family: monospace; font-weight: bold;" onfocus="this.blur()" title="Use el mapa para actualizar las coordenadas" />
+                    <div class="help-text">Las coordenadas se actualizan haciendo clic en el mapa</div>
                 </div>
 
                 <input type="hidden" name="Codigo" value="@Model.Codigo" />
@@ -313,6 +315,29 @@
         </div>
     </div>
 
+    <script>
+        // Validación simple antes de enviar
+        document.getElementById('formSucursal').addEventListener('submit', function(e) {
+            const lat = document.getElementById('Latitud').value;
+            const lng = document.getElementById('Longitud').value;
+            
+            console.log('=== Enviando formulario ===');
+            console.log('Latitud:', lat);
+            console.log('Longitud:', lng);
+            console.log('Nombre:', document.getElementById('Nombre').value);
+            console.log('Ciudad:', document.getElementById('Ciudad').value);
+            
+            // Validar que no estén vacíos
+            if (!lat || !lng) {
+                e.preventDefault();
+                alert('Error: Las coordenadas son obligatorias. Haz clic en el mapa para establecer la ubicación.');
+                return false;
+            }
+            
+            // El formulario se enviará normalmente (sin JavaScript fetch)
+            console.log('Enviando formulario a:', this.action);
+        });
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=@apiKey&callback=initMap" async defer></script>
     <script>
         let map;
@@ -354,8 +379,12 @@
         }
 
         function updateCoordinates(location) {
-            document.getElementById('Latitud').value = location.lat().toFixed(6);
-            document.getElementById('Longitud').value = location.lng().toFixed(6);
+            // Usar punto como separador decimal (formato invariante)
+            const lat = location.lat().toFixed(6);
+            const lng = location.lng().toFixed(6);
+            document.getElementById('Latitud').value = lat;
+            document.getElementById('Longitud').value = lng;
+            console.log('Coordenadas actualizadas:', lat, lng);
         }
 
         function getCityName(location) {

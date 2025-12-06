@@ -50,6 +50,17 @@ public class SucursalesController extends HttpServlet {
             return;
         }
 
+        if ("editar".equals(action)) {
+            String codigo = request.getParameter("codigo");
+            Sucursal sucursal = EurekaWebClient.obtenerSucursal(codigo);
+            String apiKeyJson = EurekaWebClient.obtenerApiKeyGoogleMaps();
+            request.setAttribute("sucursal", sucursal);
+            request.setAttribute("apiKeyJson", apiKeyJson);
+            RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/editar-sucursal.jsp");
+            rd.forward(request, response);
+            return;
+        }
+
         // Obtener lista de sucursales
         List<Sucursal> sucursales = EurekaWebClient.listarSucursales();
         request.setAttribute("sucursales", sucursales);

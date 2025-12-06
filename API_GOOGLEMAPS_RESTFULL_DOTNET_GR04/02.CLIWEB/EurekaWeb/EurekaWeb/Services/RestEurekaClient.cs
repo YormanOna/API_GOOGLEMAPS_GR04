@@ -106,6 +106,17 @@ public class RestEurekaClient : IRestEurekaClient
             // Asegurar que el código esté correctamente formateado
             sucursal.Codigo = codigo;
             
+            // Log del objeto que se va a enviar
+            Console.WriteLine($"=== Enviando PUT a api/sucursales/{codigo} ===");
+            Console.WriteLine($"Codigo: {sucursal.Codigo}");
+            Console.WriteLine($"Nombre: {sucursal.Nombre}");
+            Console.WriteLine($"Ciudad: {sucursal.Ciudad}");
+            Console.WriteLine($"Direccion: {sucursal.Direccion}");
+            Console.WriteLine($"Latitud: {sucursal.Latitud} (tipo: {sucursal.Latitud?.GetType().Name ?? "null"})");
+            Console.WriteLine($"Longitud: {sucursal.Longitud} (tipo: {sucursal.Longitud?.GetType().Name ?? "null"})");
+            Console.WriteLine($"ContadorCuenta: {sucursal.ContadorCuenta}");
+            Console.WriteLine($"IsActive: {sucursal.IsActive}");
+            
             var resp = await _http.PutAsJsonAsync($"api/sucursales/{codigo}", sucursal);
             if (!resp.IsSuccessStatusCode)
             {
@@ -113,6 +124,7 @@ public class RestEurekaClient : IRestEurekaClient
                 Console.WriteLine($"Error al actualizar sucursal {codigo}: Status {resp.StatusCode}, Respuesta: {error}");
                 throw new HttpRequestException($"Error al actualizar sucursal: {error}");
             }
+            Console.WriteLine($"✓ Sucursal {codigo} actualizada exitosamente");
             return resp.IsSuccessStatusCode;
         }
         catch (HttpRequestException)

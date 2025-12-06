@@ -268,6 +268,157 @@
             cursor: pointer;
             box-shadow: 0 2px 8px rgba(0,0,0,.2);
         }
+
+        /* Modal de confirmación de eliminación */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            width: 500px;
+            max-width: 90%;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,.5);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @@keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #c00000 0%, #900000 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .modal-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+
+        .modal-header h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .modal-body {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .modal-body p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .modal-sucursal-nombre {
+            font-weight: bold;
+            color: #c00000;
+            font-size: 20px;
+        }
+
+        .modal-warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-warning-icon {
+            font-size: 24px;
+        }
+
+        .modal-warning p {
+            margin: 0;
+            font-size: 14px;
+            color: #856404;
+            text-align: left;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .modal-btn-cancelar {
+            background: #6c757d;
+            color: white;
+        }
+
+        .modal-btn-cancelar:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108,117,125,.4);
+        }
+
+        .modal-btn-eliminar {
+            background: linear-gradient(135deg, #c00000, #900000);
+            color: white;
+        }
+
+        .modal-btn-eliminar:hover {
+            background: linear-gradient(135deg, #900000, #600000);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(192,0,0,.5);
+        }
     </style>
 </head>
 <body>
@@ -329,13 +480,11 @@
                                 <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
                             </svg>
                         </button>
-                        <form method="post" action="@Url.Action("Eliminar", "Sucursales", new { id = sucursal.Codigo })" style="display: inline;" onsubmit="return confirm('¿Está seguro de eliminar esta sucursal?');">
-                            <button type="submit" class="btn-icon btn-delete" title="Eliminar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-                                </svg>
-                            </button>
-                        </form>
+                        <button class="btn-icon btn-delete" onclick="mostrarModalEliminar('@sucursal.Codigo', '@sucursal.Nombre')" title="Eliminar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             }
@@ -437,6 +586,75 @@
                 alert('Coordenadas no válidas para esta sucursal');
             }
         }
+
+        // Funciones para el modal de eliminación
+        let sucursalAEliminar = { codigo: '', nombre: '' };
+
+        function mostrarModalEliminar(codigo, nombre) {
+            sucursalAEliminar = { codigo, nombre };
+            document.getElementById('modal-sucursal-nombre').textContent = nombre;
+            document.getElementById('modalEliminar').classList.add('active');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalEliminar').classList.remove('active');
+            sucursalAEliminar = { codigo: '', nombre: '' };
+        }
+
+        function confirmarEliminacion() {
+            // Crear un formulario y enviarlo
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '@Url.Action("Eliminar", "Sucursales")/' + sucursalAEliminar.codigo;
+            document.body.appendChild(form);
+            form.submit();
+        }
+
+        // Cerrar modal al hacer clic fuera de él
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('modalEliminar');
+            if (e.target === modal) {
+                cerrarModal();
+            }
+        });
     </script>
+
+    <!-- Modal de Confirmación de Eliminación -->
+    <div id="modalEliminar" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                    </svg>
+                </div>
+                <h2>Confirmar Eliminación</h2>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro que desea eliminar la sucursal?</p>
+                <p class="modal-sucursal-nombre" id="modal-sucursal-nombre"></p>
+                
+                <div class="modal-warning">
+                    <span class="modal-warning-icon">💡</span>
+                    <p>Esta acción marcará la sucursal como inactiva.</p>
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="button" class="modal-btn modal-btn-cancelar" onclick="cerrarModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                        Cancelar
+                    </button>
+                    <button type="button" class="modal-btn modal-btn-eliminar" onclick="confirmarEliminacion()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                            <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                        </svg>
+                        Eliminar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

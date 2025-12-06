@@ -355,8 +355,11 @@
             try {
                 const apiKeyData = <%= apiKeyJson %>;
                 apiKey = apiKeyData.apiKey || '';
+                console.log('API Key configurada:', apiKey ? 'SI' : 'NO');
+                console.log('API Key length:', apiKey ? apiKey.length : 0);
             } catch(e) {
                 console.error('Error parsing API Key:', e);
+                console.error('apiKeyJson recibido:', '<%= apiKeyJson %>');
             }
 
             function initMap() {
@@ -505,13 +508,16 @@
 
             // Cargar Google Maps API dinámicamente
             function loadGoogleMaps() {
-                if (apiKey && apiKey !== 'API_KEY_NOT_CONFIGURED') {
+                console.log('loadGoogleMaps - apiKey:', apiKey);
+                if (apiKey && apiKey !== 'API_KEY_NOT_CONFIGURED' && apiKey.trim() !== '') {
                     const script = document.createElement('script');
-                    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+                    script.src = 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=initMap';
                     script.async = true;
                     script.defer = true;
+                    console.log('Cargando Google Maps con URL:', script.src);
                     document.head.appendChild(script);
                 } else {
+                    console.error('API Key no válida:', apiKey);
                     document.getElementById('map').innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #c00000; font-size: 18px; padding: 20px; text-align: center;"><div>⚠️ Google Maps API Key no configurada.<br>Por favor, configure la API Key en el servidor.</div></div>';
                 }
             }

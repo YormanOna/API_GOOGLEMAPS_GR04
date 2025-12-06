@@ -366,10 +366,39 @@
 
             // Parsear la API Key del servidor
             try {
-                const apiKeyData = <%= apiKeyJson %>;
-                apiKey = apiKeyData.apiKey || '';
+                <% if (apiKeyJson != null) { %>
+                    const apiKeyData = <%= apiKeyJson %>;
+                    console.log('API Key Data recibida:', apiKeyData);
+                    apiKey = apiKeyData.apiKey || '';
+                    console.log('API Key extraída:', apiKey);
+                <% } else { %>
+                    console.error('apiKeyJson es null - el servidor REST podría no estar corriendo');
+                <% } %>
             } catch(e) {
                 console.error('Error parsing API Key:', e);
+                console.log('JSON recibido:', '<%= apiKeyJson %>');
+            }
+
+            // Si no hay API key del servidor, intentar obtenerla directamente
+            async function fetchApiKeyIfNeeded() {
+                if (!apiKey || apiKey.trim() === '') {
+                    console.log('Intentando obtener API Key directamente del servidor REST...');
+                    try {
+                        const response = await fetch('http://localhost:8080/WSEurekaBank_Restfull_Java_G4/resources/corebancario/config/googlemaps');
+                        if (response.ok) {
+                            const data = await response.json();
+                            console.log('API Key obtenida directamente:', data);
+                            apiKey = data.apiKey || '';
+                            if (apiKey) {
+                                loadGoogleMaps();
+                            }
+                        } else {
+                            console.error('Error en la respuesta del servidor:', response.status);
+                        }
+                    } catch(error) {
+                        console.error('Error al obtener API Key directamente:', error);
+                    }
+                }
             }
 
             function initMap() {
@@ -459,19 +488,37 @@
 
             // Cargar Google Maps API dinámicamente
             function loadGoogleMaps() {
-                if (apiKey && apiKey !== 'API_KEY_NOT_CONFIGURED') {
+                console.log('Intentando cargar Google Maps con API Key:', apiKey);
+                console.log('Longitud de API Key:', apiKey ? apiKey.length : 0);
+                console.log('Tipo de apiKey:', typeof apiKey);
+                
+                if (apiKey && apiKey !== 'API_KEY_NOT_CONFIGURED' && apiKey.trim() !== '') {
                     const script = document.createElement('script');
-                    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+                    // Usar concatenación en lugar de template string para evitar problemas con JSP
+                    script.src = 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=initMap';
+                    console.log('URL de Google Maps construida:', script.src);
+                    console.log('Longitud de script.src:', script.src.length);
                     script.async = true;
                     script.defer = true;
+                    script.onerror = function() {
+                        console.error('Error al cargar el script de Google Maps');
+                    };
                     document.head.appendChild(script);
                 } else {
-                    document.getElementById('map').innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #c00000; font-size: 18px; padding: 20px; text-align: center;"><div>⚠️ Google Maps API Key no configurada.<br>Por favor, configure la API Key en el servidor.</div></div>';
+                    console.error('API Key no válida. Valor:', apiKey);
+                    document.getElementById('map').innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #c00000; font-size: 18px; padding: 20px; text-align: center;"><div>⚠️ Google Maps API Key no configurada.<br>Por favor, configure la API Key en el servidor.<br><br>Valor recibido: "' + (apiKey || 'null') + '"</div></div>';
                 }
             }
 
             // Cargar mapa al cargar la página
-            window.addEventListener('load', loadGoogleMaps);
+            window.addEventListener('load', async function() {
+                await fetchApiKeyIfNeeded();
+                if (apiKey && apiKey.trim() !== '') {
+                    loadGoogleMaps();
+                } else {
+                    document.getElementById('map').innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #c00000; font-size: 18px; padding: 20px; text-align: center;"><div>⚠️ No se pudo obtener la API Key de Google Maps.<br>Asegúrate de que el servidor REST esté corriendo en:<br><strong>http://localhost:8080/WSEurekaBank_Restfull_Java_G4</strong></div></div>';
+                }
+            });
         </script>
     </body>
 </html>
