@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EurekaWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c746c5b7e797babd6fb3bc59f99fa586e00f3cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd6014d0cf1a50ac10a3f9ab61676f8a9319a86e")]
 [assembly: System.Reflection.AssemblyProductAttribute("EurekaWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EurekaWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

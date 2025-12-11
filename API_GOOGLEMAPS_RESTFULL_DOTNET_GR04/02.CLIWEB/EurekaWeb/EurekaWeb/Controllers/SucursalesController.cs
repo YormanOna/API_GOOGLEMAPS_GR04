@@ -259,5 +259,50 @@ namespace EurekaWeb.Controllers
 
             return RedirectToAction("Index");
         }
+
+        // GET: Sucursales/Ruta/007
+        // Calcular ruta desde ubicación del usuario hasta la sucursal
+        public async Task<IActionResult> Ruta(string id)
+        {
+            var usuario = HttpContext.Session.GetString("usuario");
+            if (string.IsNullOrEmpty(usuario))
+                return RedirectToAction("Login", "Account");
+
+            try
+            {
+                var sucursal = await _client.ObtenerSucursal(id);
+                if (sucursal == null)
+                {
+                    TempData["Error"] = "Sucursal no encontrada";
+                    return RedirectToAction("Index");
+                }
+
+                if (!sucursal.Latitud.HasValue || !sucursal.Longitud.HasValue)
+                {
+                    TempData["Error"] = "La sucursal no tiene coordenadas configuradas";
+                    return RedirectToAction("Index");
+                }
+
+                Console.WriteLine($"=== Obteniendo API Key para Ruta de sucursal {id} ===");
+                var apiKey = await _client.ObtenerApiKey();
+                Console.WriteLine($"API Key obtenida en controlador: {(string.IsNullOrEmpty(apiKey) ? "VACÍA" : "OK - " + apiKey.Length + " caracteres")}");
+                
+                ViewBag.GoogleMapsApiKey = apiKey;
+                ViewBag.Usuario = usuario;
+                
+                if (string.IsNullOrEmpty(apiKey))
+                {
+                    Console.WriteLine("⚠️ ADVERTENCIA: API Key está vacía!");
+                }
+                
+                return View(sucursal);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"✗ ERROR en acción Ruta: {ex.Message}");
+                TempData["Error"] = $"Error: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

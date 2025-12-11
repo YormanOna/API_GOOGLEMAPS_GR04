@@ -155,11 +155,24 @@ public class RestEurekaClient : IRestEurekaClient
     {
         try
         {
+            Console.WriteLine("=== Obteniendo API Key desde servidor ===");
+            Console.WriteLine($"URL: {_http.BaseAddress}api/sucursales/config/apikey");
+            
             var resp = await _http.GetFromJsonAsync<SucursalApiKeyResponse>("api/sucursales/config/apikey");
+            
+            Console.WriteLine($"API Key recibida: {(string.IsNullOrEmpty(resp?.ApiKey) ? "VACÍA o NULL" : resp.ApiKey)}");
+            Console.WriteLine($"Longitud: {resp?.ApiKey?.Length ?? 0}");
+            
             return resp?.ApiKey ?? string.Empty;
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine($"✗ ERROR al obtener API Key: {ex.Message}");
+            Console.WriteLine($"Tipo de error: {ex.GetType().Name}");
+            if (ex.InnerException != null)
+            {
+                Console.WriteLine($"Error interno: {ex.InnerException.Message}");
+            }
             return string.Empty;
         }
     }

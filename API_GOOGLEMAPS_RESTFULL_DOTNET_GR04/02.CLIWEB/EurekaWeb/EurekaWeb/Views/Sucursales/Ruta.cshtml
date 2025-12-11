@@ -1,0 +1,960 @@
+@model EurekaWeb.Models.Rest.Sucursal
+@{
+    Layout = null;
+    var usuario = (string?)ViewBag.Usuario ?? "";
+    var apiKey = (string?)ViewBag.GoogleMapsApiKey ?? "";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Cómo llegar a @Model.Nombre - EurekaBank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.98) 100%);
+            border-bottom: 5px solid #c00000;
+            padding: 20px 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-title h1 {
+            background: linear-gradient(135deg, #c00000 0%, #0052a3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .header-title .subtitle {
+            color: #6c757d;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .btn-back {
+            background: linear-gradient(135deg, #c00000 0%, #900000 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all .3s ease;
+        }
+
+        .btn-back:hover {
+            background: linear-gradient(135deg, #900000 0%, #600000 100%);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 90px);
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .control-panel {
+            width: 420px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .panel-header {
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #c00000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .panel-header h2 {
+            color: #c00000;
+            font-size: 24px;
+            flex: 1;
+        }
+
+        .destination-info {
+            background: linear-gradient(to bottom, #f8f9fa, #fff);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .destination-info h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .destination-info p {
+            color: #555;
+            font-size: 14px;
+            margin: 5px 0;
+            padding-left: 28px;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+        }
+
+        .form-section h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all .3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: #0052a3;
+            box-shadow: 0 0 0 3px rgba(0,82,163,.1);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            flex: 1;
+            background: linear-gradient(135deg, #0052a3, #003d7a);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #003d7a, #002752);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,82,163,.4);
+        }
+
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            flex: 1;
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #218838, #1e7e34);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40,167,69,.4);
+        }
+
+        .directions-panel {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .directions-panel.active {
+            display: block;
+        }
+
+        .route-summary {
+            background: linear-gradient(135deg, #0052a3, #003d7a);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .route-summary h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .route-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .route-stat {
+            flex: 1;
+            text-align: center;
+        }
+
+        .route-stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .route-stat-label {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .directions-steps {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .directions-steps h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .direction-step {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #0052a3;
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+
+        .direction-step:hover {
+            box-shadow: 0 3px 10px rgba(0,0,0,.1);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #0052a3;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .step-instruction {
+            color: #2c3e50;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .step-distance {
+            color: #6c757d;
+            font-size: 12px;
+            margin-top: 5px;
+            padding-left: 35px;
+        }
+
+        .map-container {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-controls {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+        }
+
+        .map-btn {
+            background: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,.2);
+            transition: all .3s ease;
+        }
+
+        .map-btn.active {
+            background: #0052a3;
+            color: white;
+        }
+
+        .map-btn:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,.3);
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 2px solid #bee5eb;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffc107;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        .travel-mode-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .travel-mode-btn {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .travel-mode-btn:hover {
+            border-color: #0052a3;
+            background: #f8f9fa;
+        }
+
+        .travel-mode-btn.active {
+            border-color: #0052a3;
+            background: linear-gradient(135deg, rgba(0,82,163,.1), rgba(0,61,122,.1));
+        }
+
+        .travel-mode-icon {
+            font-size: 24px;
+        }
+
+        .travel-mode-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #0052a3;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @@keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @@keyframes pulse {
+            0%, 100% { 
+                background: #d1ecf1;
+                transform: scale(1);
+            }
+            50% { 
+                background: #bee5eb;
+                transform: scale(1.02);
+            }
+        }
+
+        .map-click-hint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 82, 163, 0.95);
+            color: white;
+            padding: 30px 50px;
+            border-radius: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: pulse 1.5s infinite;
+            pointer-events: none;
+        }
+
+        .map-click-hint small {
+            display: block;
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#c00000" viewBox="0 0 24 24">
+                <path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
+            </svg>
+            <div>
+                <h1>Cómo llegar</h1>
+                <span class="subtitle">Calcular ruta a la sucursal</span>
+            </div>
+        </div>
+        <a href="@Url.Action("Index", "Sucursales")" class="btn-back">
+            ← Volver a Sucursales
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="control-panel">
+            <div class="panel-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c00000" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h2>Destino</h2>
+            </div>
+
+            <div class="destination-info">
+                <h3>
+                    🏦 @Model.Nombre
+                </h3>
+                <p><strong>Ciudad:</strong> @Model.Ciudad</p>
+                <p><strong>Dirección:</strong> @(Model.Direccion ?? "N/A")</p>
+                <p><strong>Código:</strong> @Model.Codigo</p>
+            </div>
+
+            <div class="form-section">
+                <h3>
+                    📍 Origen
+                </h3>
+                <div class="input-group">
+                    <label for="origen">Ingrese su ubicación:</label>
+                    <input type="text" id="origen" placeholder="Ej: Av. 10 de Agosto, Quito" autocomplete="off">
+                    <small style="color: #6c757d; font-size: 12px; display: block; margin-top: 5px;">
+                        💡 También puede seleccionar un punto en el mapa
+                    </small>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" id="btnSeleccionarMapa" class="btn-secondary" onclick="activarSeleccionMapa()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <span id="btnTexto">Seleccionar en mapa</span>
+                    </button>
+                </div>
+
+                <div id="origenInfo" class="alert alert-info" style="display: none; animation: pulse 1.5s infinite;">
+                    <strong>👆 HAZ CLIC EN EL MAPA</strong><br>
+                    <small>Selecciona tu punto de partida haciendo clic sobre el mapa</small>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>
+                    🚗 Modo de viaje
+                </h3>
+                <div class="travel-mode-selector">
+                    <div class="travel-mode-btn active" data-mode="DRIVING" onclick="selectTravelMode('DRIVING')">
+                        <div class="travel-mode-icon">🚗</div>
+                        <div class="travel-mode-label">Automóvil</div>
+                    </div>
+                    <div class="travel-mode-btn" data-mode="WALKING" onclick="selectTravelMode('WALKING')">
+                        <div class="travel-mode-icon">🚶</div>
+                        <div class="travel-mode-label">Caminando</div>
+                    </div>
+                    <div class="travel-mode-btn" data-mode="TRANSIT" onclick="selectTravelMode('TRANSIT')">
+                        <div class="travel-mode-icon">🚌</div>
+                        <div class="travel-mode-label">Transporte</div>
+                    </div>
+                    <div class="travel-mode-btn" data-mode="BICYCLING" onclick="selectTravelMode('BICYCLING')">
+                        <div class="travel-mode-icon">🚴</div>
+                        <div class="travel-mode-label">Bicicleta</div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn-primary" onclick="calcularRuta()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                    <path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"/>
+                </svg>
+                Calcular Ruta
+            </button>
+
+            <div id="directionsPanel" class="directions-panel">
+                <div class="route-summary">
+                    <h3>📊 Resumen del viaje</h3>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value" id="routeDistance">-</div>
+                            <div class="route-stat-label">Distancia</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value" id="routeDuration">-</div>
+                            <div class="route-stat-label">Tiempo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="directions-steps">
+                    <h3>
+                        🗺️ Indicaciones paso a paso
+                    </h3>
+                    <div id="stepsContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div class="map-controls">
+                <button class="map-btn active" onclick="setMapType('roadmap')">Mapa</button>
+                <button class="map-btn" onclick="setMapType('satellite')">Satélite</button>
+                <button class="map-btn" onclick="setMapType('terrain')">Terreno</button>
+            </div>
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="spinner"></div>
+            </div>
+            <div id="mapClickHint" class="map-click-hint" style="display: none;">
+                👆 HAZ CLIC AQUÍ
+                <small>Selecciona tu punto de partida</small>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=@apiKey&libraries=places&callback=initMap" async defer></script>
+    <script>
+        let map;
+        let directionsService;
+        let directionsRenderer;
+        let autocomplete;
+        let currentTravelMode = 'DRIVING';
+        let destinationMarker;
+        let originMarker = null;
+        let seleccionandoOrigen = false;
+        let origenSeleccionado = null;
+
+        const destination = {
+            lat: @Model.Latitud?.ToString(System.Globalization.CultureInfo.InvariantCulture),
+            lng: @Model.Longitud?.ToString(System.Globalization.CultureInfo.InvariantCulture)
+        };
+
+        // Verificar que la API Key esté presente
+        const apiKey = '@apiKey';
+        console.log('='.repeat(60));
+        console.log('API Key presente:', apiKey ? 'SÍ' : 'NO');
+        console.log('API Key completa:', apiKey);
+        console.log('Longitud de API Key:', apiKey.length);
+        console.log('='.repeat(60));
+
+        // Capturar errores de Google Maps
+        window.gm_authFailure = function() {
+            console.error('❌ ERROR DE AUTENTICACIÓN DE GOOGLE MAPS');
+            alert('ERROR: La API Key de Google Maps fue rechazada.\n\n' +
+                  'Posibles causas:\n' +
+                  '1. La API Key tiene restricciones de HTTP referrers (dominios)\n' +
+                  '2. Necesitas agregar "localhost:7061" a los referrers permitidos\n\n' +
+                  'Ve a Google Cloud Console → Credenciales → Tu API Key → Restricciones de aplicación\n' +
+                  'y agrega: http://localhost:* y https://localhost:*');
+        };
+
+        function initMap() {
+            console.log('Inicializando mapa...');
+            
+            try {
+                // Inicializar mapa centrado en la sucursal
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 14,
+                    center: destination,
+                    mapTypeId: 'roadmap',
+                    streetViewControl: true,
+                    fullscreenControl: true
+                });
+
+                console.log('✓ Mapa creado exitosamente');
+
+            // Marcador de destino
+            destinationMarker = new google.maps.Marker({
+                position: destination,
+                map: map,
+                title: '@Model.Nombre',
+                icon: {
+                    url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+                    scaledSize: new google.maps.Size(50, 50)
+                },
+                animation: google.maps.Animation.DROP
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div style="padding: 10px;">
+                        <h3 style="color: #c00000; margin-bottom: 8px;">@Model.Nombre</h3>
+                        <p><strong>Ciudad:</strong> @Model.Ciudad</p>
+                        <p><strong>Dirección:</strong> @(Model.Direccion ?? "N/A")</p>
+                    </div>
+                `
+            });
+
+            destinationMarker.addListener('click', () => {
+                infoWindow.open(map, destinationMarker);
+            });
+
+            // Inicializar servicios de direcciones
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer({
+                map: map,
+                suppressMarkers: false,
+                polylineOptions: {
+                    strokeColor: '#0052a3',
+                    strokeWeight: 5,
+                    strokeOpacity: 0.8
+                }
+            });
+
+            console.log('Servicios de direcciones inicializados');
+
+            // Autocompletar para el input de origen
+            const input = document.getElementById('origen');
+            autocomplete = new google.maps.places.Autocomplete(input, {
+                componentRestrictions: { country: 'ec' } // Restringir a Ecuador
+            });
+
+            console.log('Autocompletar configurado');
+
+            // Calcular ruta al presionar Enter
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    calcularRuta();
+                }
+            });
+
+            // Listener para seleccionar origen en el mapa
+            map.addListener('click', function(event) {
+                if (seleccionandoOrigen) {
+                    const clickedLocation = event.latLng;
+                    establecerOrigen(clickedLocation);
+                    seleccionandoOrigen = false;
+                    document.getElementById('origenInfo').style.display = 'none';
+                    document.getElementById('mapClickHint').style.display = 'none';
+                    document.getElementById('btnTexto').textContent = 'Seleccionar en mapa';
+                    document.getElementById('btnSeleccionarMapa').style.background = 'linear-gradient(135deg, #28a745, #218838)';
+                    map.setOptions({ cursor: 'default' });
+                }
+            });
+
+            console.log('Mapa completamente inicializado');
+        } catch (error) {
+            console.error('Error al inicializar el mapa:', error);
+            alert('Error al cargar el mapa: ' + error.message + '\n\nPor favor, verifica que:\n1. La API Key esté configurada correctamente\n2. Las APIs necesarias estén habilitadas en Google Cloud Console:\n   - Maps JavaScript API\n   - Directions API\n   - Geocoding API\n   - Places API');
+        }
+    }
+
+        function selectTravelMode(mode) {
+            currentTravelMode = mode;
+            document.querySelectorAll('.travel-mode-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.travel-mode-btn').classList.add('active');
+
+            // Si ya hay una ruta calculada, recalcular con el nuevo modo
+            const origen = document.getElementById('origen').value;
+            if (origen.trim()) {
+                calcularRuta();
+            }
+        }
+
+        function activarSeleccionMapa() {
+            seleccionandoOrigen = true;
+            document.getElementById('origenInfo').style.display = 'block';
+            document.getElementById('mapClickHint').style.display = 'block';
+            document.getElementById('btnTexto').textContent = 'Cancelar selección';
+            document.getElementById('btnSeleccionarMapa').style.background = 'linear-gradient(135deg, #c00000, #900000)';
+            map.setOptions({ cursor: 'crosshair' });
+            
+            // Ajustar zoom si está muy alejado
+            const currentZoom = map.getZoom();
+            if (currentZoom < 12) {
+                map.setZoom(12);
+            }
+
+            console.log('Modo selección de origen activado');
+        }
+
+        function establecerOrigen(location) {
+            console.log('Estableciendo origen en:', location.lat(), location.lng());
+            origenSeleccionado = location;
+
+            // Eliminar marcador anterior si existe
+            if (originMarker) {
+                originMarker.setMap(null);
+            }
+
+            // Crear nuevo marcador de origen
+            originMarker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Tu ubicación',
+                icon: {
+                    url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                    scaledSize: new google.maps.Size(50, 50)
+                },
+                animation: google.maps.Animation.BOUNCE
+            });
+
+            // Detener animación después de 2 segundos
+            setTimeout(() => {
+                if (originMarker) {
+                    originMarker.setAnimation(null);
+                }
+            }, 2000);
+
+            // Geocodificar para obtener la dirección
+            const geocoder = new google.maps.Geocoder();
+            document.getElementById('loadingOverlay').classList.add('active');
+            
+            geocoder.geocode({ location: location }, (results, status) => {
+                console.log('Geocoding status:', status);
+                document.getElementById('loadingOverlay').classList.remove('active');
+                
+                if (status === 'OK' && results[0]) {
+                    document.getElementById('origen').value = results[0].formatted_address;
+                    console.log('Dirección obtenida:', results[0].formatted_address);
+                    // Calcular ruta automáticamente
+                    calcularRuta();
+                } else {
+                    console.error('Error en geocoding:', status);
+                    alert('Se seleccionó el punto pero no se pudo obtener la dirección. Error: ' + status);
+                }
+            });
+        }
+
+        function calcularRuta() {
+            const origen = document.getElementById('origen').value.trim();
+            
+            // Si no hay texto pero hay origen seleccionado en el mapa, usar ese
+            let origenRequest;
+            if (origenSeleccionado) {
+                origenRequest = origenSeleccionado;
+            } else if (origen) {
+                origenRequest = origen;
+            } else {
+                alert('Por favor, ingrese una dirección de origen o selecciónela en el mapa');
+                return;
+            }
+
+            document.getElementById('loadingOverlay').classList.add('active');
+
+            const request = {
+                origin: origenRequest,
+                destination: destination,
+                travelMode: google.maps.TravelMode[currentTravelMode],
+                unitSystem: google.maps.UnitSystem.METRIC,
+                provideRouteAlternatives: true
+            };
+
+            directionsService.route(request, (result, status) => {
+                document.getElementById('loadingOverlay').classList.remove('active');
+                
+                console.log('Directions API status:', status);
+                
+                if (status === 'OK') {
+                    console.log('Ruta calculada exitosamente');
+                    directionsRenderer.setDirections(result);
+                    mostrarIndicaciones(result);
+                } else {
+                    console.error('Error al calcular ruta:', status);
+                    let errorMsg = 'No se pudo calcular la ruta.';
+                    switch (status) {
+                        case 'ZERO_RESULTS':
+                            errorMsg = 'No se encontró ninguna ruta entre estos dos puntos.';
+                            break;
+                        case 'NOT_FOUND':
+                            errorMsg = 'No se pudo encontrar la dirección de origen o destino.';
+                            break;
+                        case 'OVER_QUERY_LIMIT':
+                            errorMsg = 'Se ha excedido el límite de consultas a la API.';
+                            break;
+                        case 'REQUEST_DENIED':
+                            errorMsg = '❌ LA SOLICITUD FUE DENEGADA POR GOOGLE MAPS\n\n';
+                            errorMsg += '🔧 SOLUCIÓN:\n';
+                            errorMsg += '1. Ve a Google Cloud Console\n';
+                            errorMsg += '2. Busca y habilita: "Routes API"\n';
+                            errorMsg += '3. Asegúrate que "Directions API" también esté habilitada\n\n';
+                            errorMsg += '📝 NOTA: Google ahora requiere la Routes API (nueva)\n';
+                            errorMsg += 'además de la Directions API (legacy).\n\n';
+                            errorMsg += '🔗 https://console.cloud.google.com/apis/library';
+                            break;
+                        case 'INVALID_REQUEST':
+                            errorMsg = 'La solicitud fue inválida. Verifica las direcciones ingresadas.';
+                            break;
+                        case 'UNKNOWN_ERROR':
+                            errorMsg = 'Error desconocido. Por favor, intenta nuevamente.';
+                            break;
+                    }
+                    alert(errorMsg);
+                }
+            });
+        }
+
+        function mostrarIndicaciones(result) {
+            const route = result.routes[0];
+            const leg = route.legs[0];
+
+            // Mostrar panel de direcciones
+            document.getElementById('directionsPanel').classList.add('active');
+
+            // Actualizar resumen
+            document.getElementById('routeDistance').textContent = leg.distance.text;
+            document.getElementById('routeDuration').textContent = leg.duration.text;
+
+            // Generar pasos
+            const stepsContainer = document.getElementById('stepsContainer');
+            stepsContainer.innerHTML = '';
+
+            leg.steps.forEach((step, index) => {
+                const stepDiv = document.createElement('div');
+                stepDiv.className = 'direction-step';
+                stepDiv.onclick = () => {
+                    map.setCenter(step.start_location);
+                    map.setZoom(17);
+                };
+
+                const instruction = step.instructions.replace(/<[^>]*>/g, ''); // Limpiar HTML
+                
+                stepDiv.innerHTML = `
+                    <div class="step-instruction">
+                        <span class="step-number">${index + 1}</span>
+                        ${instruction}
+                    </div>
+                    <div class="step-distance">${step.distance.text} - ${step.duration.text}</div>
+                `;
+
+                stepsContainer.appendChild(stepDiv);
+            });
+        }
+
+        function setMapType(type) {
+            map.setMapTypeId(type);
+            document.querySelectorAll('.map-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

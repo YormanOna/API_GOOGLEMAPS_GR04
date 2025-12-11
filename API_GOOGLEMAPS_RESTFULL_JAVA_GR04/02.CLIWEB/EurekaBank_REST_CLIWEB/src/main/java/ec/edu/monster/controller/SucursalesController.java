@@ -61,6 +61,24 @@ public class SucursalesController extends HttpServlet {
             return;
         }
 
+        if ("ruta".equals(action)) {
+            String codigo = request.getParameter("codigo");
+            Sucursal sucursal = EurekaWebClient.obtenerSucursal(codigo);
+            
+            // Validar que la sucursal tenga coordenadas
+            if (sucursal != null && sucursal.getLatitud() != null && sucursal.getLongitud() != null) {
+                String apiKeyJson = EurekaWebClient.obtenerApiKeyGoogleMaps();
+                request.setAttribute("sucursal", sucursal);
+                request.setAttribute("apiKeyJson", apiKeyJson);
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ruta-sucursal.jsp");
+                rd.forward(request, response);
+            } else {
+                // Si no tiene coordenadas, redirigir con mensaje de error
+                response.sendRedirect(request.getContextPath() + "/sucursales?error=sin_coordenadas");
+            }
+            return;
+        }
+
         // Obtener lista de sucursales
         List<Sucursal> sucursales = EurekaWebClient.listarSucursales();
         request.setAttribute("sucursales", sucursales);

@@ -562,12 +562,13 @@
                                     </button>
                                     <% if (s.getLatitud() != null && s.getLongitud() != null) { %>
                                         <button class="btn-navigate" 
+                                                data-codigo="<%= s.getCodigo() %>"
                                                 data-lat="<%= s.getLatitud() %>"
                                                 data-lng="<%= s.getLongitud() %>"
                                                 data-nombre="<%= s.getNombre() %>"
                                                 data-direccion="<%= s.getDireccion() %>"
                                                 onclick="navigateToSucursalFromButton(this)" 
-                                                title="Navegar en Google Maps">
+                                                title="Cómo llegar">
                                             <i class="fas fa-directions"></i>
                                         </button>
                                     <% } else { %>
@@ -679,23 +680,19 @@
 
             // Función que lee las coordenadas desde los data attributes del botón
             function navigateToSucursalFromButton(button) {
+                const codigo = button.getAttribute('data-codigo');
                 const lat = button.getAttribute('data-lat');
                 const lng = button.getAttribute('data-lng');
-                navigateToSucursal(lat, lng);
-            }
-
-            function navigateToSucursal(lat, lng) {
-                // Validar que no sean null, undefined, o strings vacíos
+                
+                // Validar que tenga coordenadas
                 if (!lat || !lng || lat === 'null' || lng === 'null' || lat === '' || lng === '') {
                     alert('Esta sucursal no tiene coordenadas configuradas correctamente');
                     return;
                 }
                 
-                // Convertir a número y validar
+                // Validar que las coordenadas sean números válidos
                 const latNum = parseFloat(lat);
                 const lngNum = parseFloat(lng);
-                
-                // Validar que las coordenadas sean números válidos
                 if (isNaN(latNum) || isNaN(lngNum)) {
                     alert('Las coordenadas de esta sucursal tienen un formato inválido');
                     return;
@@ -707,9 +704,13 @@
                     return;
                 }
                 
-                // URL con destino usando coordenadas directamente
-                const url = 'https://www.google.com/maps/dir/?api=1&destination=' + latNum + ',' + lngNum + '&travelmode=driving';
-                window.open(url, '_blank');
+                // Redirigir a la página de rutas
+                window.location.href = '<%= request.getContextPath() %>/sucursales?action=ruta&codigo=' + codigo;
+            }
+
+            function navigateToSucursal(lat, lng) {
+                // Esta función ya no se usa, pero se mantiene por compatibilidad
+                alert('Use el botón "Cómo llegar" para calcular la ruta');
             }
 
             function showToast(title, message, isError = false) {
