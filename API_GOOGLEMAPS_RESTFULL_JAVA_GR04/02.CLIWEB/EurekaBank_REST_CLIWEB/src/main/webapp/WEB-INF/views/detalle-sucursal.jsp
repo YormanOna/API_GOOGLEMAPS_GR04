@@ -329,8 +329,7 @@
 
                         <div class="actions">
                             <% if (sucursal.getLatitud() != null && sucursal.getLongitud() != null) { %>
-                                <a href="https://www.google.com/maps/dir/?api=1&destination=<%= sucursal.getLatitud() %>,<%= sucursal.getLongitud() %>&travelmode=driving" 
-                                   target="_blank" 
+                                <a href="<%= request.getContextPath()%>/sucursales?action=ruta&codigo=<%= sucursal.getCodigo() %>" 
                                    class="btn btn-navigate">
                                     <i class="fas fa-directions"></i> Cómo Llegar
                                 </a>

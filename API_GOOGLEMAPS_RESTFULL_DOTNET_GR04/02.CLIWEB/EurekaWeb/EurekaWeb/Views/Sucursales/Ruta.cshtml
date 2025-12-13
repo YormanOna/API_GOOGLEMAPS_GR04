@@ -545,7 +545,7 @@
                 </h3>
                 <div class="input-group">
                     <label for="origen">Ingrese su ubicación:</label>
-                    <input type="text" id="origen" placeholder="Ej: Av. 10 de Agosto, Quito" autocomplete="off">
+                    <input type="text" id="origen" placeholder="Ej: Av. 10 de Agosto, Quito" autocomplete="off" oninput="limpiarOrigenSeleccionado()">
                     <small style="color: #6c757d; font-size: 12px; display: block; margin-top: 5px;">
                         💡 También puede seleccionar un punto en el mapa
                     </small>
@@ -781,6 +781,19 @@
         }
 
         function activarSeleccionMapa() {
+            // Si ya está en modo selección, cancelar
+            if (seleccionandoOrigen) {
+                seleccionandoOrigen = false;
+                document.getElementById('origenInfo').style.display = 'none';
+                document.getElementById('mapClickHint').style.display = 'none';
+                document.getElementById('btnTexto').textContent = 'Seleccionar en mapa';
+                document.getElementById('btnSeleccionarMapa').style.background = 'linear-gradient(135deg, #28a745, #218838)';
+                map.setOptions({ cursor: 'default' });
+                console.log('Modo selección cancelado');
+                return;
+            }
+            
+            // Activar modo selección
             seleccionandoOrigen = true;
             document.getElementById('origenInfo').style.display = 'block';
             document.getElementById('mapClickHint').style.display = 'block';
@@ -845,19 +858,45 @@
             });
         }
 
+        function limpiarOrigenSeleccionado() {
+            // Cuando el usuario escribe, limpiar el origen seleccionado en el mapa
+            if (origenSeleccionado) {
+                console.log('Limpiando origen seleccionado, usuario está escribiendo');
+                origenSeleccionado = null;
+                
+                // Eliminar marcador de origen si existe
+                if (originMarker) {
+                    originMarker.setMap(null);
+                    originMarker = null;
+                }
+            }
+        }
+
         function calcularRuta() {
             const origen = document.getElementById('origen').value.trim();
             
-            // Si no hay texto pero hay origen seleccionado en el mapa, usar ese
+            // Priorizar el texto del input sobre el punto seleccionado en el mapa
             let origenRequest;
-            if (origenSeleccionado) {
-                origenRequest = origenSeleccionado;
-            } else if (origen) {
+            if (origen) {
+                // Si hay texto en el campo, usar ese y limpiar selección del mapa
                 origenRequest = origen;
+                origenSeleccionado = null;
+                
+                // Eliminar marcador de origen anterior si existe
+                if (originMarker) {
+                    originMarker.setMap(null);
+                    originMarker = null;
+                }
+            } else if (origenSeleccionado) {
+                // Si no hay texto pero hay origen seleccionado en el mapa, usar ese
+                origenRequest = origenSeleccionado;
             } else {
                 alert('Por favor, ingrese una dirección de origen o selecciónela en el mapa');
                 return;
             }
+
+            // Limpiar ruta anterior antes de calcular nueva
+            directionsRenderer.setDirections({routes: []});
 
             document.getElementById('loadingOverlay').classList.add('active');
 

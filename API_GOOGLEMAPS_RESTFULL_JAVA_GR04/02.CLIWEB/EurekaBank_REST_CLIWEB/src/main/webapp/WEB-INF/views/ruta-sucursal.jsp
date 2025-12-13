@@ -936,12 +936,30 @@
                         displayRoute(result);
                     } else {
                         let errorMsg = 'No se pudo calcular la ruta.';
+                        let suggestion = '';
+                        
                         if (status === 'ZERO_RESULTS') {
-                            errorMsg = 'No se encontro ninguna ruta entre estos puntos.';
+                            if (selectedTravelMode === 'TRANSIT') {
+                                errorMsg = 'No hay rutas de transporte publico disponibles entre estos puntos.';
+                                suggestion = '\n\nSugerencia: Intenta con "Automovil" o "Caminando".';
+                            } else if (selectedTravelMode === 'BICYCLING') {
+                                errorMsg = 'No hay rutas para bicicleta disponibles entre estos puntos.';
+                                suggestion = '\n\nSugerencia: Intenta con "Automovil" o "Caminando".';
+                            } else {
+                                errorMsg = 'No se encontro ninguna ruta entre estos puntos con el modo seleccionado.';
+                                suggestion = '\n\nSugerencia: Intenta con otro modo de transporte.';
+                            }
                         } else if (status === 'NOT_FOUND') {
                             errorMsg = 'No se pudo encontrar una o ambas ubicaciones.';
+                            suggestion = '\n\nVerifica que las direcciones sean correctas.';
+                        } else if (status === 'INVALID_REQUEST') {
+                            errorMsg = 'La solicitud no es valida. Verifica los datos ingresados.';
+                        } else if (status === 'OVER_QUERY_LIMIT') {
+                            errorMsg = 'Se ha excedido el limite de consultas a la API.';
+                            suggestion = '\n\nIntenta nuevamente en unos minutos.';
                         }
-                        alert(errorMsg + ' Estado: ' + status);
+                        
+                        alert(errorMsg + suggestion);
                     }
                 });
             }
