@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_02.CLIMOV.Vista.SucursalesPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header Blanco SOLO con Usuario y Cerrar Sesión -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="20,15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+                <Border HeightRequest="45"
+                        WidthRequest="45"
+                        BackgroundColor="#1E3A8A"
+                        Stroke="Transparent">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="22.5"/>
+                    </Border.StrokeShape>
+                    <Image Source="monster.jpg" Aspect="AspectFill"/>
+                </Border>
+
+                <Label x:Name="LblUsuario"
+                       Text="MONSTER"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="#1F2937"
+                       VerticalOptions="Center"/>
+
+                <Button Text="Cerrar Sesión"
+                        Clicked="OnCerrarSesionClicked"
+                        BackgroundColor="#B91C1C"
+                        TextColor="White"
+                        CornerRadius="8"
+                        FontSize="14"
+                        Padding="20,10"/>
+            </HorizontalStackLayout>
+
+            <BoxView Grid.Row="1" Color="#B91C1C" HeightRequest="2"/>
+        </Grid>
+
+        <!-- Fondo con gradiente azul oscuro -->
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#1E3A8A" Offset="0.0" />
+                    <GradientStop Color="#1E40AF" Offset="0.3" />
+                    <GradientStop Color="#1E3A8A" Offset="0.7" />
+                    <GradientStop Color="#312E81" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <ScrollView Padding="30">
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Botón Volver -->
+                    <Button Text="← Volver al Menú"
+                            Clicked="OnVolverClicked"
+                            BackgroundColor="#6B7280"
+                            TextColor="White"
+                            CornerRadius="8"
+                            FontSize="14"
+                            Padding="15,10"
+                            HorizontalOptions="Start"/>
+
+                    <!-- Tarjeta Sucursales -->
+                    <Frame CornerRadius="20"
+                           HasShadow="True"
+                           Padding="0"
+                           BackgroundColor="White"
+                           Margin="0,0,0,10">
+
+                        <Grid RowDefinitions="Auto,Auto" Padding="0">
+
+                            <!-- Header morado -->
+                            <Grid Grid.Row="0" BackgroundColor="#8B5CF6" Padding="20">
+                                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="15">
+                                    <Border HeightRequest="50"
+                                            WidthRequest="50"
+                                            BackgroundColor="White">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+                                        <Label Text="🏦"
+                                               FontSize="28"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+                                    </Border>
+
+                                    <VerticalStackLayout Grid.Column="1" Spacing="3" VerticalOptions="Center">
+                                        <Label Text="Sucursales"
+                                               FontSize="20"
+                                               FontAttributes="Bold"
+                                               TextColor="White"/>
+                                        <Label Text="Listado y administración"
+                                               FontSize="13"
+                                               TextColor="White"
+                                               Opacity="0.9"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Grid>
+
+                            <!-- Contenido -->
+                            <VerticalStackLayout Grid.Row="1" Padding="25" Spacing="15">
+
+                                <!-- Buscar -->
+                                <Label Text="Buscar:"
+                                       FontSize="14"
+                                       TextColor="#6B7280"
+                                       FontAttributes="Bold"/>
+
+                                <Border Stroke="#D1D5DB"
+                                        StrokeThickness="1"
+                                        BackgroundColor="White"
+                                        Padding="12,8">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Entry x:Name="EntryBuscar"
+                                           Placeholder="Código, nombre o ciudad"
+                                           PlaceholderColor="#9CA3AF"
+                                           TextColor="#1F2937"
+                                           FontSize="16"
+                                           TextChanged="OnBuscarTextChanged"/>
+                                </Border>
+
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                                    <Button Text="NUEVA SUCURSAL"
+                                            Grid.Column="0"
+                                            Clicked="OnNuevaSucursalClicked"
+                                            HeightRequest="48"
+                                            FontAttributes="Bold"
+                                            FontSize="14"
+                                            TextColor="White"
+                                            BackgroundColor="#B91C1C"
+                                            CornerRadius="10"/>
+
+                                    <Button Text="REFRESCAR"
+                                            Grid.Column="1"
+                                            Clicked="OnRefrescarClicked"
+                                            HeightRequest="48"
+                                            FontAttributes="Bold"
+                                            FontSize="14"
+                                            TextColor="White"
+                                            BackgroundColor="#3B82F6"
+                                            CornerRadius="10"/>
+                                </Grid>
+
+                                <!-- Lista -->
+                                <Frame CornerRadius="16"
+                                       HasShadow="False"
+                                       BackgroundColor="#F9FAFB"
+                                       Padding="12">
+
+                                    <CollectionView x:Name="ListaSucursales"
+                                                    SelectionMode="None">
+                                        <CollectionView.EmptyView>
+                                            <Label Text="No hay sucursales para mostrar."
+                                                   TextColor="#6B7280"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   Margin="10"/>
+                                        </CollectionView.EmptyView>
+
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Frame CornerRadius="14"
+                                                       HasShadow="True"
+                                                       Padding="0"
+                                                       BackgroundColor="White"
+                                                       Margin="0,8">
+                                                    <Grid Padding="14" RowDefinitions="Auto,Auto,Auto">
+
+                                                        <!-- Top -->
+                                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                                            <Border HeightRequest="42"
+                                                                    WidthRequest="42"
+                                                                    BackgroundColor="#1E40AF"
+                                                                    Stroke="Transparent">
+                                                                <Border.StrokeShape>
+                                                                    <RoundRectangle CornerRadius="10"/>
+                                                                </Border.StrokeShape>
+                                                                <Label Text="🏦"
+                                                                       FontSize="22"
+                                                                       HorizontalOptions="Center"
+                                                                       VerticalOptions="Center"/>
+                                                            </Border>
+
+                                                            <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                                                <Label Text="{Binding Nombre}"
+                                                                       FontAttributes="Bold"
+                                                                       FontSize="16"
+                                                                       TextColor="#111827"
+                                                                       LineBreakMode="TailTruncation"/>
+                                                                <HorizontalStackLayout Spacing="10">
+                                                                    <Label Text="{Binding Codigo, StringFormat='Código: {0}'}"
+                                                                           FontSize="12"
+                                                                           TextColor="#6B7280"/>
+                                                                    <Label Text="{Binding Ciudad, StringFormat='Ciudad: {0}'}"
+                                                                           FontSize="12"
+                                                                           TextColor="#6B7280"/>
+                                                                </HorizontalStackLayout>
+                                                            </VerticalStackLayout>
+                                                        </Grid>
+
+                                                        <!-- Dirección -->
+                                                        <Label Grid.Row="1"
+                                                               Text="{Binding Direccion, StringFormat='Dirección: {0}'}"
+                                                               FontSize="12"
+                                                               TextColor="#374151"
+                                                               Margin="0,10,0,0"
+                                                               LineBreakMode="TailTruncation"/>
+
+                                                        <!-- Acciones (4 botones) -->
+                                                        <Grid Grid.Row="2"
+      ColumnDefinitions="*,*,*,*"
+      ColumnSpacing="10"
+      Margin="0,12,0,0">
+
+                                                            <Button Grid.Column="0"
+            Text="ℹ️"
+            FontSize="18"
+            BackgroundColor="#1E40AF"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="40"
+            Padding="0"
+            CommandParameter="{Binding Codigo}"
+            Clicked="OnDetallesClicked" />
+
+                                                            <Button Grid.Column="1"
+            Text="✏️"
+            FontSize="18"
+            BackgroundColor="#F59E0B"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="40"
+            Padding="0"
+            CommandParameter="{Binding Codigo}"
+            Clicked="OnEditarClicked" />
+
+                                                            <Button Grid.Column="2"
+            Text="🗺️"
+            FontSize="18"
+            BackgroundColor="#10B981"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="40"
+            Padding="0"
+            CommandParameter="{Binding Codigo}"
+            Clicked="OnRutasClicked" />
+
+                                                            <Button Grid.Column="3"
+            Text="🗑️"
+            FontSize="18"
+            BackgroundColor="#B91C1C"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="40"
+            Padding="0"
+            CommandParameter="{Binding Codigo}"
+            Clicked="OnEliminarClicked" />
+                                                        </Grid>
+
+
+                                                    </Grid>
+                                                </Frame>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+
+                                </Frame>
+
+                                <ActivityIndicator x:Name="LoadingIndicator"
+                                                  IsRunning="False"
+                                                  IsVisible="False"
+                                                  Color="#8B5CF6"
+                                                  HeightRequest="40"/>
+
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

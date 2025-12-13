@@ -9,73 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EurekaWeb
 build_property.RootNamespace = EurekaWeb
-build_property.ProjectDir = C:\Users\DETPC\OneDrive\Documentos\Github\API_GOOGLEMAPS_GR04\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\02.CLIWEB\EurekaWeb\EurekaWeb\
+build_property.ProjectDir = D:\ARQ_google_maps\API_GOOGLEMAPS_GR04\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\02.CLIWEB\EurekaWeb\EurekaWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DETPC\OneDrive\Documentos\Github\API_GOOGLEMAPS_GR04\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\02.CLIWEB\EurekaWeb\EurekaWeb
+build_property.MSBuildProjectDirectory = D:\ARQ_google_maps\API_GOOGLEMAPS_GR04\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\02.CLIWEB\EurekaWeb\EurekaWeb
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Account/Login.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Home/Menu.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Home/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Home/Privacy.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Home/Resultado.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Home/Resultado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN1bHRhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Movimientos/Index.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Movimientos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1pZW50b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Shared/Error.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Crear.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjdXJzYWxlc1xDcmVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Detalle.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjdXJzYWxlc1xEZXRhbGxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Editar.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjdXJzYWxlc1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Index.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjdXJzYWxlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Ruta.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Sucursales/Ruta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjdXJzYWxlc1xSdXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/_ViewImports.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/_ViewStart.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DETPC/OneDrive/Documentos/Github/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Shared/_Layout.cshtml]
+[D:/ARQ_google_maps/API_GOOGLEMAPS_GR04/API_GOOGLEMAPS_RESTFULL_DOTNET_GR04/02.CLIWEB/EurekaWeb/EurekaWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1pcwaldzi8

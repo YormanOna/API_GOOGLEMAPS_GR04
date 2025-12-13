@@ -1,9 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DETPC\\OneDrive\\Documentos\\Github\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\",
+  "WorkspaceRootPath": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|c:\\users\\detpc\\onedrive\\documentos\\github\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\views\\sucursales\\ruta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\views\\sucursales\\ruta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\views\\sucursales\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\views\\sucursales\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\views\\sucursales\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\views\\sucursales\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\views\\sucursales\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\views\\sucursales\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\views\\sucursales\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\views\\sucursales\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\services\\resteurekaclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\services\\resteurekaclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\services\\iresteurekaclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\services\\iresteurekaclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\controllers\\sucursalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\controllers\\sucursalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\models\\restdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\models\\restdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\models\\resultadovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\models\\resultadovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.cliweb\\eurekaweb\\eurekaweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51A1C8EE-212A-41BA-8EC1-A7C072CB19D1}|EurekaWeb\\EurekaWeb.csproj|solutionrelative:eurekaweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,10 +67,153 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Ruta.cshtml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
+              "RelativeDocumentMoniker": "EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
+              "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
+              "ViewState": "AgIAANEDAAAAAAAAAAAwwOcDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T17:59:03.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Index.cshtml",
+              "RelativeDocumentMoniker": "EurekaWeb\\Views\\Sucursales\\Index.cshtml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Index.cshtml",
+              "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Index.cshtml",
+              "ViewState": "AgIAAH4CAAAAAAAAAAAwwJQCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T17:58:58.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Editar.cshtml",
+              "RelativeDocumentMoniker": "EurekaWeb\\Views\\Sucursales\\Editar.cshtml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Editar.cshtml",
+              "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Editar.cshtml",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAwwKoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T17:58:52.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Detalle.cshtml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Detalle.cshtml",
+              "RelativeDocumentMoniker": "EurekaWeb\\Views\\Sucursales\\Detalle.cshtml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Detalle.cshtml",
+              "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Detalle.cshtml",
+              "ViewState": "AgIAAMoBAAAAAAAAAAAwwOABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T17:58:46.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Crear.cshtml",
+              "RelativeDocumentMoniker": "EurekaWeb\\Views\\Sucursales\\Crear.cshtml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Crear.cshtml",
+              "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Crear.cshtml",
+              "ViewState": "AgIAAKIBAAAAAAAAAAAwwLgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T17:58:40.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResultadoVm.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Models\\ResultadoVm.cs",
+              "RelativeDocumentMoniker": "EurekaWeb\\Models\\ResultadoVm.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Models\\ResultadoVm.cs",
+              "RelativeToolTip": "EurekaWeb\\Models\\ResultadoVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:57:29.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "EurekaWeb\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "EurekaWeb\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:57:26.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SucursalesController.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Controllers\\SucursalesController.cs",
+              "RelativeDocumentMoniker": "EurekaWeb\\Controllers\\SucursalesController.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Controllers\\SucursalesController.cs",
+              "RelativeToolTip": "EurekaWeb\\Controllers\\SucursalesController.cs",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAwwDQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:57:24.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRestEurekaClient.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Services\\IRestEurekaClient.cs",
+              "RelativeDocumentMoniker": "EurekaWeb\\Services\\IRestEurekaClient.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Services\\IRestEurekaClient.cs",
+              "RelativeToolTip": "EurekaWeb\\Services\\IRestEurekaClient.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:57:19.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RestEurekaClient.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Services\\RestEurekaClient.cs",
+              "RelativeDocumentMoniker": "EurekaWeb\\Services\\RestEurekaClient.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Services\\RestEurekaClient.cs",
+              "RelativeToolTip": "EurekaWeb\\Services\\RestEurekaClient.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAwwLMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:57:04.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RestDtos.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Models\\RestDtos.cs",
+              "RelativeDocumentMoniker": "EurekaWeb\\Models\\RestDtos.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Models\\RestDtos.cs",
+              "RelativeToolTip": "EurekaWeb\\Models\\RestDtos.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwCYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T17:56:31.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DETPC\\OneDrive\\Documentos\\Github\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Program.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Program.cs",
               "RelativeDocumentMoniker": "EurekaWeb\\Program.cs",
-              "ToolTip": "C:\\Users\\DETPC\\OneDrive\\Documentos\\Github\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Program.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Program.cs",
               "RelativeToolTip": "EurekaWeb\\Program.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwBIAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

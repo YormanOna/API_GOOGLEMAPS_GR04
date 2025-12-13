@@ -2123,23 +2123,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DETPC\\.nuget\\packages\\": {},
+    "C:\\Users\\danie\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DETPC\\OneDrive\\Documentos\\Github\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\01.SERVIDOR\\WS_EB_DOTNET_REST_Servidor\\WS_EB_DOTNET_REST_Servidor.csproj",
+      "projectUniqueName": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\01.SERVIDOR\\WS_EB_DOTNET_REST_Servidor\\WS_EB_DOTNET_REST_Servidor.csproj",
       "projectName": "WS_EB_DOTNET_REST_Servidor",
-      "projectPath": "C:\\Users\\DETPC\\OneDrive\\Documentos\\Github\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\01.SERVIDOR\\WS_EB_DOTNET_REST_Servidor\\WS_EB_DOTNET_REST_Servidor.csproj",
-      "packagesPath": "C:\\Users\\DETPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DETPC\\OneDrive\\Documentos\\Github\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\01.SERVIDOR\\WS_EB_DOTNET_REST_Servidor\\obj\\",
+      "projectPath": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\01.SERVIDOR\\WS_EB_DOTNET_REST_Servidor\\WS_EB_DOTNET_REST_Servidor.csproj",
+      "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+      "outputPath": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\01.SERVIDOR\\WS_EB_DOTNET_REST_Servidor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DETPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2201,7 +2201,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

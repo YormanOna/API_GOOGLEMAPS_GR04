@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_02.CLIMOV.Vista.UbicacionPickerPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+        <!-- Barra simple -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="16,12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Text="Seleccionar ubicación"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#1F2937"
+                   HorizontalOptions="Center"/>
+
+            <BoxView Grid.Row="1" Color="#B91C1C" HeightRequest="2"/>
+        </Grid>
+
+        <!-- Mapa + acciones -->
+        <Grid Grid.Row="1" RowDefinitions="*,Auto" BackgroundColor="#111827">
+            <WebView x:Name="MapWeb"
+                     Grid.Row="0"
+                     Navigating="OnWebNavigating" />
+
+            <Grid Grid.Row="1" ColumnDefinitions="*,*" Padding="12" ColumnSpacing="12" BackgroundColor="#111827">
+                <Button Text="USAR"
+                        Clicked="OnUsarClicked"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        BackgroundColor="#10B981"
+                        CornerRadius="10"
+                        HeightRequest="48"/>
+
+                <Button Grid.Column="1"
+                        Text="CANCELAR"
+                        Clicked="OnCancelarClicked"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        BackgroundColor="#6B7280"
+                        CornerRadius="10"
+                        HeightRequest="48"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

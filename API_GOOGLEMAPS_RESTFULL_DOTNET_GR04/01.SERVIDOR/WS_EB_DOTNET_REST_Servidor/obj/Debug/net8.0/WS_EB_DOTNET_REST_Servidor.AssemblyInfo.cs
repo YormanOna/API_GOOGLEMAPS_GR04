@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WS_EB_DOTNET_REST_Servidor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c746c5b7e797babd6fb3bc59f99fa586e00f3cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3a11d23dd52fd09582141611b9b49d82c6c083b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WS_EB_DOTNET_REST_Servidor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WS_EB_DOTNET_REST_Servidor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

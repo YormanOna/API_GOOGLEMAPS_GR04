@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_02.CLIMOV.Vista.SucursalEditPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header Blanco -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="20,15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+                <Border HeightRequest="45"
+                        WidthRequest="45"
+                        BackgroundColor="#1E3A8A"
+                        Stroke="Transparent">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="22.5"/>
+                    </Border.StrokeShape>
+                    <Image Source="monster.jpg" Aspect="AspectFill"/>
+                </Border>
+
+                <Label x:Name="LblUsuario"
+                       Text="MONSTER"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="#1F2937"
+                       VerticalOptions="Center"/>
+
+                <Button Text="Cerrar Sesión"
+                        Clicked="OnCerrarSesionClicked"
+                        BackgroundColor="#B91C1C"
+                        TextColor="White"
+                        CornerRadius="8"
+                        FontSize="14"
+                        Padding="20,10"/>
+            </HorizontalStackLayout>
+
+            <BoxView Grid.Row="1" Color="#B91C1C" HeightRequest="2"/>
+        </Grid>
+
+        <!-- Fondo -->
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#1E3A8A" Offset="0.0" />
+                    <GradientStop Color="#1E40AF" Offset="0.3" />
+                    <GradientStop Color="#1E3A8A" Offset="0.7" />
+                    <GradientStop Color="#312E81" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <ScrollView>
+                <VerticalStackLayout Padding="20" Spacing="20">
+
+                    <Button Text="← Volver a Sucursales"
+                            Clicked="OnVolverClicked"
+                            BackgroundColor="#6B7280"
+                            TextColor="White"
+                            CornerRadius="8"
+                            FontSize="14"
+                            Padding="15,10"
+                            HorizontalOptions="Start"/>
+
+                    <Frame CornerRadius="20"
+                           HasShadow="True"
+                           Padding="0"
+                           BackgroundColor="White"
+                           VerticalOptions="Start"
+                           MaximumWidthRequest="650"
+                           HorizontalOptions="Center">
+
+                        <Grid RowDefinitions="Auto,Auto" Padding="0">
+
+                            <Grid Grid.Row="0" BackgroundColor="#3B82F6" Padding="25">
+                                <HorizontalStackLayout Spacing="15">
+                                    <Border HeightRequest="60" WidthRequest="60" BackgroundColor="White">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="30"/>
+                                        </Border.StrokeShape>
+                                        <Label Text="🏦" FontSize="35" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </Border>
+
+                                    <VerticalStackLayout Spacing="2" VerticalOptions="Center">
+                                        <Label x:Name="LblTitulo"
+                                               Text="Nueva Sucursal"
+                                               FontSize="22"
+                                               FontAttributes="Bold"
+                                               TextColor="White"/>
+                                        <Label Text="Completa los datos y guarda"
+                                               FontSize="13"
+                                               TextColor="White"
+                                               Opacity="0.9"/>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Grid>
+
+                            <VerticalStackLayout Grid.Row="1" Padding="30" Spacing="16">
+
+                                <Label Text="Código (3 dígitos):" FontSize="14" TextColor="#6B7280" FontAttributes="Bold"/>
+                                <Border Stroke="#D1D5DB" StrokeThickness="1" Padding="12,8">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Entry x:Name="EntryCodigo" Placeholder="001" Keyboard="Numeric"
+                                           PlaceholderColor="#9CA3AF" TextColor="#1F2937" FontSize="16"/>
+                                </Border>
+
+                                <Label Text="Nombre:" FontSize="14" TextColor="#6B7280" FontAttributes="Bold"/>
+                                <Border Stroke="#D1D5DB" StrokeThickness="1" Padding="12,8">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Entry x:Name="EntryNombre" Placeholder="Sucursal Central"
+                                           PlaceholderColor="#9CA3AF" TextColor="#1F2937" FontSize="16"/>
+                                </Border>
+
+                                <Label Text="Ciudad:" FontSize="14" TextColor="#6B7280" FontAttributes="Bold"/>
+                                <Border Stroke="#D1D5DB" StrokeThickness="1" Padding="12,8">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Entry x:Name="EntryCiudad" Placeholder="Montería"
+                                           PlaceholderColor="#9CA3AF" TextColor="#1F2937" FontSize="16"/>
+                                </Border>
+
+                                <Label Text="Dirección:" FontSize="14" TextColor="#6B7280" FontAttributes="Bold"/>
+                                <Border Stroke="#D1D5DB" StrokeThickness="1" Padding="12,8">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Entry x:Name="EntryDireccion" Placeholder="Cra 1 # 2-3"
+                                           PlaceholderColor="#9CA3AF" TextColor="#1F2937" FontSize="16"/>
+                                </Border>
+
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                                    <VerticalStackLayout Grid.Column="0" Spacing="8">
+                                        <Label Text="Latitud:" FontSize="14" TextColor="#6B7280" FontAttributes="Bold"/>
+                                        <Border Stroke="#D1D5DB" StrokeThickness="1" Padding="12,8">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="8"/>
+                                            </Border.StrokeShape>
+                                            <Entry x:Name="EntryLat" Placeholder="Ej: 8.7479" Keyboard="Numeric"
+                                                   PlaceholderColor="#9CA3AF" TextColor="#1F2937" FontSize="16"/>
+                                        </Border>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Column="1" Spacing="8">
+                                        <Label Text="Longitud:" FontSize="14" TextColor="#6B7280" FontAttributes="Bold"/>
+                                        <Border Stroke="#D1D5DB" StrokeThickness="1" Padding="12,8">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="8"/>
+                                            </Border.StrokeShape>
+                                            <Entry x:Name="EntryLng" Placeholder="Ej: -75.8814" Keyboard="Numeric"
+                                                   PlaceholderColor="#9CA3AF" TextColor="#1F2937" FontSize="16"/>
+                                        </Border>
+                                    </VerticalStackLayout>
+                                </Grid>
+                                <Button Text="ELEGIR EN MAPA"
+        Clicked="OnElegirEnMapaClicked"
+        HeightRequest="48"
+        FontAttributes="Bold"
+        FontSize="14"
+        TextColor="White"
+        BackgroundColor="#8B5CF6"
+        CornerRadius="10"/>
+
+
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,10,0,0">
+                                    <Button x:Name="BtnGuardar"
+                                            Text="GUARDAR"
+                                            Grid.Column="0"
+                                            Clicked="OnGuardarClicked"
+                                            HeightRequest="50"
+                                            FontAttributes="Bold"
+                                            FontSize="16"
+                                            TextColor="White"
+                                            BackgroundColor="#3B82F6"
+                                            CornerRadius="10"/>
+
+                                    <Button Text="CANCELAR"
+                                            Grid.Column="1"
+                                            Clicked="OnCancelarClicked"
+                                            HeightRequest="50"
+                                            FontAttributes="Bold"
+                                            FontSize="16"
+                                            TextColor="White"
+                                            BackgroundColor="#6B7280"
+                                            CornerRadius="10"/>
+                                </Grid>
+
+                                <ActivityIndicator x:Name="LoadingIndicator"
+                                                  IsRunning="False"
+                                                  IsVisible="False"
+                                                  Color="#3B82F6"
+                                                  HeightRequest="40"/>
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Frame>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+        </Grid>
+    </Grid>
+</ContentPage>

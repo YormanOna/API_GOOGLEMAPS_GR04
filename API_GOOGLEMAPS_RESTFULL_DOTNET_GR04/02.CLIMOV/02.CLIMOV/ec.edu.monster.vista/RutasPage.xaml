@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             x:Class="_02.CLIMOV.Vista.RutasPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header estilo app -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="20,15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+                <Border HeightRequest="45" WidthRequest="45" BackgroundColor="#1E3A8A" Stroke="Transparent">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="22.5"/>
+                    </Border.StrokeShape>
+                    <Image Source="monster.jpg" Aspect="AspectFill"/>
+                </Border>
+
+                <Label x:Name="LblUsuario"
+                       Text="MONSTER"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="#1F2937"
+                       VerticalOptions="Center"/>
+
+                <Button Text="Cerrar Sesión"
+                        Clicked="OnCerrarSesionClicked"
+                        BackgroundColor="#B91C1C"
+                        TextColor="White"
+                        CornerRadius="8"
+                        FontSize="14"
+                        Padding="20,10"/>
+            </HorizontalStackLayout>
+
+            <BoxView Grid.Row="1" Color="#B91C1C" HeightRequest="2"/>
+        </Grid>
+
+        <!-- Contenido -->
+        <Grid Grid.Row="1" RowDefinitions="Auto,*">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#1E3A8A" Offset="0.0" />
+                    <GradientStop Color="#1E40AF" Offset="0.3" />
+                    <GradientStop Color="#1E3A8A" Offset="0.7" />
+                    <GradientStop Color="#312E81" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <!-- Panel superior -->
+            <Frame Grid.Row="0"
+                   CornerRadius="18"
+                   HasShadow="True"
+                   Padding="16"
+                   BackgroundColor="White"
+                   Margin="20,20,20,10">
+
+                <VerticalStackLayout Spacing="10">
+                    <Button Text="← Volver"
+                            Clicked="OnVolverClicked"
+                            BackgroundColor="#6B7280"
+                            TextColor="White"
+                            CornerRadius="8"
+                            FontSize="14"
+                            Padding="12,10"
+                            HorizontalOptions="Start"/>
+
+                    <Label x:Name="LblDestino"
+                           Text="Destino: -"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#111827"/>
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Picker x:Name="PickerModo"
+        Grid.Column="0"
+        Title="Modo" />
+
+
+
+
+                        <Button Grid.Column="1"
+                                Text="ELEGIR ORIGEN (MAPA)"
+                                Clicked="OnElegirOrigenClicked"
+                                BackgroundColor="#3B82F6"
+                                TextColor="White"
+                                FontSize="12"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                HeightRequest="44"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*">
+                        <Button Text="CALCULAR RUTA"
+            Clicked="OnCalcularRutaClicked"
+            BackgroundColor="#B91C1C"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            HeightRequest="44"/>
+                    </Grid>
+
+
+                    <Label x:Name="LblInfo"
+                           Text="Toca el mapa para elegir el origen."
+                           FontSize="12"
+                           TextColor="#6B7280"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Mapa -->
+            <Frame Grid.Row="1"
+                   CornerRadius="18"
+                   HasShadow="True"
+                   Padding="0"
+                   BackgroundColor="White"
+                   Margin="20,10,20,20">
+
+                <WebView x:Name="MapWeb"
+                         Navigating="OnWebNavigating"/>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

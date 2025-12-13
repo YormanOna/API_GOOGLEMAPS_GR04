@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_02.CLIMOV.Vista.SucursalDetallePage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="20,15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+                <Border HeightRequest="45" WidthRequest="45" BackgroundColor="#1E3A8A" Stroke="Transparent">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="22.5"/>
+                    </Border.StrokeShape>
+                    <Image Source="monster.jpg" Aspect="AspectFill"/>
+                </Border>
+
+                <Label x:Name="LblUsuario" Text="MONSTER" FontSize="16" FontAttributes="Bold" TextColor="#1F2937" VerticalOptions="Center"/>
+
+                <Button Text="Cerrar Sesión"
+                        Clicked="OnCerrarSesionClicked"
+                        BackgroundColor="#B91C1C" TextColor="White" CornerRadius="8" FontSize="14" Padding="20,10"/>
+            </HorizontalStackLayout>
+
+            <BoxView Grid.Row="1" Color="#B91C1C" HeightRequest="2"/>
+        </Grid>
+
+        <!-- Fondo -->
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#1E3A8A" Offset="0.0" />
+                    <GradientStop Color="#1E40AF" Offset="0.3" />
+                    <GradientStop Color="#1E3A8A" Offset="0.7" />
+                    <GradientStop Color="#312E81" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <ScrollView Padding="30">
+                <VerticalStackLayout Spacing="20">
+
+                    <Button Text="← Volver a Sucursales"
+                            Clicked="OnVolverClicked"
+                            BackgroundColor="#6B7280" TextColor="White" CornerRadius="8"
+                            FontSize="14" Padding="15,10" HorizontalOptions="Start"/>
+
+                    <Frame CornerRadius="20" HasShadow="True" Padding="0" BackgroundColor="White">
+                        <Grid RowDefinitions="Auto,Auto" Padding="0">
+
+                            <Grid Grid.Row="0" BackgroundColor="#8B5CF6" Padding="20">
+                                <HorizontalStackLayout Spacing="15">
+                                    <Border HeightRequest="50" WidthRequest="50" BackgroundColor="White">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+                                        <Label Text="🏦" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </Border>
+
+                                    <VerticalStackLayout Spacing="2" VerticalOptions="Center">
+                                        <Label x:Name="LblNombre" Text="Sucursal" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                                        <Label x:Name="LblCodigo" Text="Código: 000" FontSize="13" TextColor="White" Opacity="0.9"/>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Grid>
+
+                            <VerticalStackLayout Grid.Row="1" Padding="25" Spacing="12">
+                                <Label x:Name="LblCiudad" Text="Ciudad:" FontSize="14" TextColor="#374151"/>
+                                <Label x:Name="LblDireccion" Text="Dirección:" FontSize="14" TextColor="#374151"/>
+                                <Label x:Name="LblContadorCuenta" Text="Contador Cuenta:" FontSize="14" TextColor="#374151"/>
+                                <Label x:Name="LblCoords" Text="Coords:" FontSize="14" TextColor="#374151"/>
+
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,10,0,0">
+                                    <Button Text="EDITAR"
+                                            Grid.Column="0"
+                                            Clicked="OnEditarClicked"
+                                            HeightRequest="48"
+                                            FontAttributes="Bold"
+                                            FontSize="14"
+                                            TextColor="White"
+                                            BackgroundColor="#F59E0B"
+                                            CornerRadius="10"/>
+                                    <Button Text="RUTAS / INDICACIONES"
+                                            Grid.Column="1"
+                                            Clicked="OnRutasClicked"
+                                            HeightRequest="48"
+                                            FontAttributes="Bold"
+                                            FontSize="12"
+                                            TextColor="White"
+                                            BackgroundColor="#10B981"
+                                            CornerRadius="10"/>
+                                </Grid>
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Frame>
+
+                    <ActivityIndicator x:Name="LoadingIndicator"
+                                       IsRunning="False" IsVisible="False"
+                                       Color="White" HeightRequest="50"/>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>
