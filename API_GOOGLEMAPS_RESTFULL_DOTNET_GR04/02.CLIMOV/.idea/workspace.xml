@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea71f543-fba8-417d-b7bd-19b07abc0a36" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/02.CLIMOV/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/02.CLIMOV/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/02.CLIMOV/FileContentIndex/4a2f58ed-35e2-4955-b7ea-9e2add1a2db6.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-android/02.CLIMOV.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-android/02.CLIMOV.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-android/02.CLIMOV.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-android/02.CLIMOV.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-ios/iossimulator-x64/02.CLIMOV.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-ios/iossimulator-x64/02.CLIMOV.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-ios/iossimulator-x64/02.CLIMOV.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-ios/iossimulator-x64/02.CLIMOV.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-maccatalyst/maccatalyst-x64/02.CLIMOV.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-maccatalyst/maccatalyst-x64/02.CLIMOV.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-maccatalyst/maccatalyst-x64/02.CLIMOV.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-maccatalyst/maccatalyst-x64/02.CLIMOV.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-windows10.0.19041.0/win10-x64/02.CLIMOV.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-windows10.0.19041.0/win10-x64/02.CLIMOV.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-windows10.0.19041.0/win10-x64/02.CLIMOV.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/02.CLIMOV/obj/net9.0-windows10.0.19041.0/win10-x64/02.CLIMOV.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.CLIWEB/EurekaWeb/.vs/EurekaWeb/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../02.CLIWEB/EurekaWeb/.vs/EurekaWeb/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.CLIWEB/EurekaWeb/.vs/EurekaWeb/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02.CLIWEB/EurekaWeb/.vs/EurekaWeb/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.CLIWEB/EurekaWeb/.vs/EurekaWeb/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02.CLIWEB/EurekaWeb/.vs/EurekaWeb/v17/DocumentLayout.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="36qKF0OzZOixxaInkP5qxgG2V4G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea71f543-fba8-417d-b7bd-19b07abc0a36" name="Changes" comment="" />
+      <created>1765728559527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765728559527</updated>
+    </task>
+    <servers />
+  </component>
+</project>

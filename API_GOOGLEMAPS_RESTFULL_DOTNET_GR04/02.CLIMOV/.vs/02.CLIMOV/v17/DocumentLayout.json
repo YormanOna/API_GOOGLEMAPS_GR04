@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\sucursalespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\sucursalespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\sucursalespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\sucursalespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\menupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\menupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\menupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\menupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\rutaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\rutaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\rutaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\rutaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\sucursalespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\sucursalespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\sucursaleditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\sucursaleditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\sucursaleditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,8 +35,36 @@
       "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\sucursaldetallepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\ubicacionpickerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\rutaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\rutaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\rutaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\rutaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\menupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\menupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\movimientospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\movimientospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.vista\\menupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.vista\\menupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.modelo\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.modelo\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.servicio\\restservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,20 +75,8 @@
       "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.servicio\\irestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\ec.edu.monster.modelo\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\ec.edu.monster.modelo\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
       "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|solutionrelative:02.climov\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED628AC6-7BB9-491B-971B-D44A18DFD1C7}|02.CLIMOV\\02.CLIMOV.csproj|d:\\arq_google_maps\\api_googlemaps_gr04\\api_googlemaps_restfull_dotnet_gr04\\02.climov\\02.climov\\globalxmlns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,163 +134,215 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MenuPage.xaml",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
-              "ViewState": "AgIAACcBAAAAAAAAAAAwwD0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:50:52.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SucursalesPage.xaml",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAgwPYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:58:13.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "SucursalEditPage.xaml.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml.cs",
               "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml.cs",
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAywN4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAQwPwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T18:59:07.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "SucursalesPage.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAYwCYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T18:58:13.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SucursalesPage.xaml.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml.cs",
               "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml.cs",
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalesPage.xaml.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAkwJ8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAAAKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T18:58:18.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MenuPage.xaml.cs",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:00:23.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RutasPage.xaml",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T20:16:51.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RutasPage.xaml.cs",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAYwGQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T20:17:07.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UbicacionPickerPage.xaml.cs",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAUwEAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T20:10:19.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SucursalEditPage.xaml",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAwwNQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:58:49.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SucursalDetallePage.xaml.cs",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAkwFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T20:09:29.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SucursalDetallePage.xaml",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T20:09:15.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "UbicacionPickerPage.xaml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml",
               "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml",
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAYwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-13T20:09:58.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UbicacionPickerPage.xaml.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\UbicacionPickerPage.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAwGMAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T20:10:19.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SucursalEditPage.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalEditPage.xaml",
+              "ViewState": "AgIAALsAAAAAAAAAAAAYwNQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T18:58:49.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SucursalDetallePage.xaml.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAuwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T20:09:29.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SucursalDetallePage.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\SucursalDetallePage.xaml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAYwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T20:09:15.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RutasPage.xaml.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml.cs",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAYwG8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T20:17:07.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RutasPage.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\RutasPage.xaml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAYwIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T20:16:51.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MenuPage.xaml.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:00:23.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MovimientosPage.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MovimientosPage.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\MovimientosPage.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MovimientosPage.xaml",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\MovimientosPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-14T17:54:37.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "MenuPage.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\MenuPage.xaml",
+              "ViewState": "AgIAACQBAAAAAAAAAAAYwD0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T18:50:52.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "02.CLIMOV\\AppShell.xaml.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml.cs",
+              "RelativeToolTip": "02.CLIMOV\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:32:08.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml",
+              "RelativeDocumentMoniker": "02.CLIMOV\\AppShell.xaml",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml",
+              "RelativeToolTip": "02.CLIMOV\\AppShell.xaml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T19:31:40.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Sucursal.cs",
+              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
+              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
+              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
+              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T18:41:33.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "RestService.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.servicio\\RestService.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.servicio\\RestService.cs",
@@ -294,12 +350,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.servicio\\RestService.cs",
               "ViewState": "AgIAAPoBAAAAAAAAAAAwwBACAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:40:18.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:40:18.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "IRestService.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.servicio\\IRestService.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.servicio\\IRestService.cs",
@@ -307,25 +362,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.servicio\\IRestService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAuwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:39:31.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:39:31.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Sucursal.cs",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
-              "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
-              "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.modelo\\Sucursal.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:41:33.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "AndroidManifest.xml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\Platforms\\Android\\AndroidManifest.xml",
               "RelativeDocumentMoniker": "02.CLIMOV\\Platforms\\Android\\AndroidManifest.xml",
@@ -336,20 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml",
-              "RelativeDocumentMoniker": "02.CLIMOV\\AppShell.xaml",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml",
-              "RelativeToolTip": "02.CLIMOV\\AppShell.xaml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T19:31:40.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "GlobalXmlns.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\GlobalXmlns.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\GlobalXmlns.cs",
@@ -357,25 +385,11 @@
               "RelativeToolTip": "02.CLIMOV\\GlobalXmlns.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T21:06:35.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T21:06:35.559Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "02.CLIMOV\\AppShell.xaml.cs",
-              "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\AppShell.xaml.cs",
-              "RelativeToolTip": "02.CLIMOV\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAswBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:32:08.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\App.xaml",
               "RelativeDocumentMoniker": "02.CLIMOV\\App.xaml",
@@ -383,12 +397,11 @@
               "RelativeToolTip": "02.CLIMOV\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T19:17:10.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T19:17:10.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\App.xaml.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\App.xaml.cs",
@@ -396,12 +409,11 @@
               "RelativeToolTip": "02.CLIMOV\\App.xaml.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:17:16.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T19:17:16.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "TransferenciaPage.xaml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\TransferenciaPage.xaml",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\TransferenciaPage.xaml",
@@ -409,12 +421,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\TransferenciaPage.xaml",
               "ViewState": "AgIAAGoAAAAAAAAAAAAgwHIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:51:06.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:51:06.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RetiroPage.xaml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\RetiroPage.xaml",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\RetiroPage.xaml",
@@ -422,12 +433,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\RetiroPage.xaml",
               "ViewState": "AgIAAGIAAAAAAAAAAAAgwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:51:02.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:51:02.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\LoginPage.xaml",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\LoginPage.xaml",
@@ -435,12 +445,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\LoginPage.xaml",
               "ViewState": "AgIAAK8AAAAAAAAAAAAgwMcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:50:48.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:50:48.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "DepositoPage.xaml",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.vista\\DepositoPage.xaml",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.vista\\DepositoPage.xaml",
@@ -448,12 +457,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.vista\\DepositoPage.xaml",
               "ViewState": "AgIAAGIAAAAAAAAAAAAgwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-13T18:50:42.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:50:42.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "OperacionResponse.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\ec.edu.monster.modelo\\OperacionResponse.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\ec.edu.monster.modelo\\OperacionResponse.cs",
@@ -461,12 +469,11 @@
               "RelativeToolTip": "02.CLIMOV\\ec.edu.monster.modelo\\OperacionResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:41:44.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:41:44.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "MainApplication.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\Platforms\\Android\\MainApplication.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\Platforms\\Android\\MainApplication.cs",
@@ -474,12 +481,11 @@
               "RelativeToolTip": "02.CLIMOV\\Platforms\\Android\\MainApplication.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:39:28.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:39:28.265Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "MainActivity.cs",
               "DocumentMoniker": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIMOV\\02.CLIMOV\\Platforms\\Android\\MainActivity.cs",
               "RelativeDocumentMoniker": "02.CLIMOV\\Platforms\\Android\\MainActivity.cs",
@@ -487,8 +493,7 @@
               "RelativeToolTip": "02.CLIMOV\\Platforms\\Android\\MainActivity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T18:33:27.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:33:27.458Z"
             }
           ]
         }

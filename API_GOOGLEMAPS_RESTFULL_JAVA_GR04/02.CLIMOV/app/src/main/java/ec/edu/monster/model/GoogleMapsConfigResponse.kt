@@ -1,4 +1,7 @@
+// GoogleMapsConfigResponse.kt
 package ec.edu.monster.model
 
-class GoogleMapsConfigResponse {
-}
+data class GoogleMapsConfigResponse(
+    val apiKey: String = "",
+    val configured: Boolean = false
+)

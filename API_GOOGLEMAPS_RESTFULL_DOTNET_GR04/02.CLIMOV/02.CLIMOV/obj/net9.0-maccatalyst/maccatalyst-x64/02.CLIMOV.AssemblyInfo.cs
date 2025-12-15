@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CLIMOV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b3a11d23dd52fd09582141611b9b49d82c6c083b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ddc6e6535866e5b7d9364425b7e6879d97661496")]
 [assembly: System.Reflection.AssemblyProductAttribute("CLIMOV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CLIMOV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

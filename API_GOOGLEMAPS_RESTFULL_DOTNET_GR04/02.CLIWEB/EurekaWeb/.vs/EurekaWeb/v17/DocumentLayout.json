@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
               "ToolTip": "D:\\ARQ_google_maps\\API_GOOGLEMAPS_GR04\\API_GOOGLEMAPS_RESTFULL_DOTNET_GR04\\02.CLIWEB\\EurekaWeb\\EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
               "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Ruta.cshtml",
-              "ViewState": "AgIAANEDAAAAAAAAAAAwwOcDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAN0DAAAAAAAAAAAUwOcDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-13T17:59:03.856Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Index.cshtml",
               "ViewState": "AgIAAH4CAAAAAAAAAAAwwJQCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-13T17:58:58.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:58:58.533Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Editar.cshtml",
               "ViewState": "AgIAAJQBAAAAAAAAAAAwwKoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-13T17:58:52.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:58:52.981Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Detalle.cshtml",
               "ViewState": "AgIAAMoBAAAAAAAAAAAwwOABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-13T17:58:46.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:58:46.644Z"
             },
             {
               "$type": "Document",
@@ -126,8 +123,7 @@
               "RelativeToolTip": "EurekaWeb\\Views\\Sucursales\\Crear.cshtml",
               "ViewState": "AgIAAKIBAAAAAAAAAAAwwLgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-13T17:58:40.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:58:40.149Z"
             },
             {
               "$type": "Document",
@@ -139,8 +135,7 @@
               "RelativeToolTip": "EurekaWeb\\Models\\ResultadoVm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:57:29.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:57:29.912Z"
             },
             {
               "$type": "Document",
@@ -152,8 +147,7 @@
               "RelativeToolTip": "EurekaWeb\\Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:57:26.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:57:26.839Z"
             },
             {
               "$type": "Document",
@@ -165,8 +159,7 @@
               "RelativeToolTip": "EurekaWeb\\Controllers\\SucursalesController.cs",
               "ViewState": "AgIAAB4BAAAAAAAAAAAwwDQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:57:24.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:57:24.288Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "EurekaWeb\\Services\\IRestEurekaClient.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:57:19.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:57:19.604Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "RelativeToolTip": "EurekaWeb\\Services\\RestEurekaClient.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAAAwwLMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:57:04.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:57:04.685Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "EurekaWeb\\Models\\RestDtos.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAuwCYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T17:56:31.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T17:56:31.884Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "EurekaWeb\\Program.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwBIAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T13:24:02.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T13:24:02.255Z"
             }
           ]
         }
